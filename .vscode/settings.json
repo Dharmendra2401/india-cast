@@ -1,0 +1,6 @@
+{
+    "editor.wordWrapColumn": 10,
+    "debug.console.wordWrap": false,
+    "editor.wordWrap": "on",
+    "php.validate.executablePath": ""
+}
