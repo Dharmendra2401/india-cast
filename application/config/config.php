@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -23,7 +25,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+
 $config['base_url'] = 'http://localhost/cast-india/';
+//if(isset($_SERVER['HTTP']) && $_SERVER['HTTP'] == "on"){$ssl_set = "s";} else{$ssl_set = "";}
+//$config['base_url'] = "http".$ssl_set."://".$_SERVER['HTTP_HOST'];
 
 
 /*
@@ -326,7 +331,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'wrewerrewwytrtry456546654343yty';
 
 /*
 |--------------------------------------------------------------------------

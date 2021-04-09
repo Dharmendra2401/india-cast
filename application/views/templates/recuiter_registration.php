@@ -4,9 +4,9 @@
 		<div class="registration-grids">
 			<div class="reg-form">
 				<div class="reg">
-                    <h3>Recuiter Registration</h3>
+                    <h3>Recruiter Registration</h3>
                     <?php if($this->session->flashdata('error')!=''){echo $this->session->flashdata('error');}  ?>
-					<img src="http://www.castindia.in/images/27.png" alt="">
+					<img src="<?php echo base_url();?>images/27.png" alt="">
 					 <p>Welcome, please enter the following details to continue.</p>
                      <p>If you have previously registered with us, <a href="http://www.castindia.in/recruiter/login">click here</a></p>
                      
@@ -27,41 +27,41 @@
 						 </ul>						
 						  <ul>
 							 <li class="text-info"><span class="text-danger">*</span> Company Name:</li>
-							 <li><input type="text" name="company_name" id="display_name" placeholder="Company name" class="form-control" maxlength='100'></li>
+							 <li><input type="text" name="company_name" id="display_name" placeholder="Company name" class="" maxlength='100'></li>
 						 </ul>						
 						  <ul>
 							 <li class="text-info"><span class="text-danger">*</span> First Name: </li>
-							 <li><input type="text" name="firstname" placeholder="First Name" id="firstname" class="form-control inputtext" maxlength='15'></li>
+							 <li><input type="text" name="firstname" placeholder="First Name" id="firstname" class=" inputtext" maxlength='15'></li>
 						 </ul>
 						 <ul>
 							 <li class="text-info"><span class="text-danger">*</span> Last Name: </li>
-							 <li><input type="text" name="lastname" placeholder="Last Name" id="lastname" class="form-control inputtext" maxlength='15'></li>
+							 <li><input type="text" name="lastname" placeholder="Last Name" id="lastname" class="inputtext" maxlength='15'></li>
 						 </ul>				 
 						 <ul>
 							 <li class="text-info"><span class="text-danger">*</span> Mobile Number:</li>
-							 <li><input type="tel" id="contact_no" name="contact_no" placeholder="Contact Number" maxlength="15" id="contact_no" class="form-control"  onKeyPress="return isNumeric(event)" onchange="return checkphone()"></li>
+							 <li><input type="tel" id="contact_no" name="contact_no" placeholder="Contact Number" maxlength="15" id="contact_no" class=""  onKeyPress="return isNumeric(event)" onchange="return checkphone()"></li>
 						 </ul>						
 						  <ul>
 							 <li class="text-info"><span class="text-danger">*</span> Email: </li>
-							 <li><input type="email" name="email" id="email" placeholder="Email" class="form-control" maxlength='150' onchange="return checkemail();"></li>
+							 <li><input type="email" name="email" id="email" placeholder="Email" class="" maxlength='150' onchange="return checkemail();"></li>
                          </ul>
 
                          <ul>
 							 <li class="text-info"><span class="text-danger">*</span> GST Number: </li>
-							 <li><input type="text" name="gstno" id="gstno" placeholder="Gst No" class="text-uppercase form-control" maxlength='15'  ></li>
+							 <li><input type="text" name="gstno" id="gstno" placeholder="Gst No" class="text-uppercase " maxlength='15'  ></li>
                          </ul>
                          
                          <ul>
 							 <li class="text-info"><span class="text-danger">*</span> PAN Number: </li>
-							 <li><input type="text" name="panno" id="penno" placeholder="Pan No" class="text-uppercase form-control" maxlength='10'></li>
+							 <li><input type="text" name="panno" id="penno" placeholder="Pan No" class="text-uppercase " maxlength='10'></li>
 						 </ul>
 						 <ul>
 							 <li class="text-info"><span class="text-danger">*</span> Password: </li>
-							 <li><input type="password" id="password" name="password" placeholder="Password" class="form-control" maxlength="15"></li>
+							 <li><input type="password" id="password" name="password" placeholder="Password" class="" maxlength="15"></li>
 						 </ul>
 						 <ul>
 							 <li class="text-info"><span class="text-danger">*</span> Re-enter Password:</li>
-							 <li class="position-relative"><input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" class="form-control" maxlength="15"> <span id="message" class="spinner-load"></span></li>
+							 <li class="position-relative"><input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" class="" maxlength="15"> <span id="message" class="spinner-load"></span></li>
                          </ul>
                         
                          <ul id="error"></ul>

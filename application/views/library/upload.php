@@ -1,5 +1,6 @@
 <?php
 	require("image.php");
+	require("imageclass.php");
 	function utf8_strlen($string) 
 	{
 		return mb_strlen($string);
@@ -40,4 +41,50 @@
 		}
 		$image->save($new_image);
 	}
+	function createResized($filename, $thumb_path, $max_dim) {
+        
+		list($width, $height) = getimagesize($filename);
+	
+		  $ratio = $width / $height;
+	
+		  if( $ratio < 1) 
+		  {
+			  $new_height = $max_dim;
+	  
+			  $new_width = round($max_dim * $ratio);
+	  
+		  } else 	// horizontal
+	  
+		  {
+	  
+			  $new_width = $max_dim; 
+	  
+			  $new_height = round($max_dim / $ratio);
+	  
+		  }
+	  
+		 
+	  
+		  $img = new Zubrag_image;
+	  
+			  $img->max_x     	= $new_width;
+	  
+			  $img->max_y        = $new_height;
+	  
+		  $img->cut_x        = 0;
+	  
+		  $img->cut_y        = 0;
+	  
+		  $img->quality      = 100;
+	  
+		  $img->save_to_file = true;
+	  
+		  $img->image_type   = -1;	
+	  
+		  $img->GenerateThumbFile($filename, $thumb_path);
+	  
+	  
+	  
+	  }
+	  
 ?>

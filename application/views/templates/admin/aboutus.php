@@ -21,7 +21,7 @@ $title="About Us";
 <form class="p-3 border bg-light" enctype="multipart/form-data" method="post" action="<?php echo base_url();?>admin/updateabout" >
 <div class="form-group">
 <label> Image</label><br>
-<input type="file"  name="profile_image" id="profile_image" max-size="30" accept="image/png, image/jpeg">
+<input type="file"  name="profile_image" id="profile_image"  accept="image/x-png,image/gif,image/jpeg" >
 <input type="hidden" name="oldimage" id="oldimage" value="<?php echo $about['image']; ?>" >
 <img src="<?php echo base_url().'uploads/about/'.$about['image']; ?>" alt="about us" style="width:100px" ><br>
 <small><i>Please select the size of image 500*350</i></small>
@@ -56,10 +56,15 @@ $("#profile_image").change(function (e) {
     if ((file = this.files[0])) {
         img = new Image();
         img.onload = function () {
-        if((this.width!=500) && (this.height!=350)){
+        if((this.width<=500)){
             $('#profile_image').val('');
             $('#profile_image').focus();
-            $('#imageerror').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Sorry! Please select the size of image 500*350 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+            $('#imageerror').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Sorry! Please select the size of image greater then or equal to 500*350 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+        }
+        else if((this.height<=350)){
+            $('#profile_image').val('');
+            $('#profile_image').focus();
+            $('#imageerror').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Sorry! Please select the size of image greater then or equal to 500*350 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
         } else{
             $('#imageerror').html('');
 

@@ -37,9 +37,9 @@
                                       
                                     <a href="<?php echo base_url().'admin/job_details?token='.base64_encode($index['id']);?>" title="View details"  class="rounded btn btn-sm btn-success"><i class="fas fa-eye"></i></a> 
                                     <a href="#" title="delete" data-toggle="modal"  onclick="return btnclickdelete('<?php echo $index['id']; ?>','jobs');" class="rounded btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>  <?php if($index['admin_approval']=='Y'){ ?>
-                                    <a href="#" title="Click here to disapprove" data-toggle="modal"  onclick="return unverify('<?php echo $index['id']; ?>','N','jobs');" class="rounded btn btn-sm btn-success"><i class="fas fa-check"></i></a>
+                                    <a href="#" title="Click here to disapprove" data-toggle="modal"  onclick="return unverify('<?php echo $index['id']; ?>','N','jobs','<?php echo $index['recruiter_id']; ?>');" class="rounded btn btn-sm btn-success"><i class="fas fa-check"></i></a>
                                     <?php }else{ ?>
-                                    <a href="#" title="Click here to approve" data-toggle="modal"  onclick="return verify('<?php echo $index['id']; ?>','Y','jobs');" class="rounded btn btn-sm btn-danger"><i class="fas fa-times"></i></a>
+                                    <a href="#" title="Click here to approve" data-toggle="modal"  onclick="return verify('<?php echo $index['id']; ?>','Y','jobs','<?php echo $index['recruiter_id']; ?>');" class="rounded btn btn-sm btn-danger"><i class="fas fa-times"></i></a>
                                     <?php } ?></td>
                                 </tr>
                                 <?php $i++;} ?>

@@ -13,10 +13,68 @@
 Dashboard
 </a>
 
-<a class="nav-link" href="<?php echo base_url(); ?>admin/slider_content">
-<div class="sb-nav-link-icon"><i class="fas fa-sliders-h"></i></div>
-Slider/Content
+<a class="nav-link" href="<?php echo base_url(); ?>admin/vedio">
+<div class="sb-nav-link-icon"><i class="fas fa-photo-video"></i></div>
+Video Content
 </a>
+
+<a class="nav-link" href="<?php echo base_url(); ?>admin/hired_hire">
+<div class="sb-nav-link-icon"><i class="fas fa-suitcase"></i></div>
+Steps Hired/Hire
+</a>
+
+<a class="nav-link" href="<?php echo base_url(); ?>admin/banner_image">
+<div class="sb-nav-link-icon"><i class="fas fa-image"></i></div>
+Banner Image
+</a>
+
+<a class="nav-link" href="<?php echo base_url(); ?>admin/recentemp">
+<div class="sb-nav-link-icon"><i class="fas fa-user-md"></i></div>
+Recent Emp
+</a>
+
+<a class="nav-link" href="<?php echo base_url(); ?>admin/faq">
+<div class="sb-nav-link-icon"><i class="fas fa-question"></i></div>
+FAQ
+</a>
+
+<a class="nav-link" href="<?php echo base_url(); ?>admin/usercontent">
+<div class="sb-nav-link-icon"><i class="fas fa-file-word"></i></div>
+User Content
+</a>
+<a class="nav-link " href="<?php echo base_url(); ?>admin/testimonials" >
+<div class="sb-nav-link-icon"><i class="fas fa-comments"></i></div>
+Testimonials
+</a>
+
+<a class="nav-link <?php if(($pagename=='aspprofile')||($pagename=='aspsubcat')){ echo 'active';}?>" href="<?php echo base_url(); ?>admin/aspcat">
+<div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
+Aspirant Category
+</a>
+
+<a class="nav-link" href="<?php echo base_url(); ?>admin/empcat">
+<div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
+Employer Profile
+</a>
+
+<a class="nav-link" href="<?php echo base_url(); ?>admin/faqquerries">
+<div class="sb-nav-link-icon"><i class="fas fa-question-circle"></i></div>
+FAQ Query
+</a>
+
+
+<!-- 
+<a class="nav-link <?php if(($pagename=='recuiter_list')||($pagename=='jobs_list')||($pagename=='job_details')||($pagename=='view_recruiter')){echo "collapsed active";}else{ echo "";} ?>" href="#" data-toggle="collapse" data-target="#collapseLayouts" <?php if($pagename=='recuiter_list'){echo "aria-expanded='true'";}else{ echo "aria-expanded='false'";} ?> aria-controls="collapseLayouts">
+<div class="sb-nav-link-icon"><i class="fas fa-user-tie"></i></div>
+Recruiters
+<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+</a>
+<div class="collapse <?php if(($pagename=='recuiter_list')||($pagename=='jobs_list') ||($pagename=='job_details')||($pagename=='view_recruiter')){echo "show";}else{ echo "";} ?>" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+<nav class="sb-sidenav-menu-nested nav">
+<a class="nav-link" href="<?php echo base_url(); ?>admin/recuiter_list"><div class="sb-nav-link-icon"><i class="fas fa-list-alt"></i></div> Recruiters List</a>
+<a class="nav-link" href="<?php echo base_url(); ?>admin/jobs_list"><div class="sb-nav-link-icon"><i class="fas fa-briefcase"></i></div> Recruiters Jobs</a>
+</nav>
+</div>
 
 <a class="nav-link" href="<?php echo base_url(); ?>admin/industriesone">
 <div class="sb-nav-link-icon"><i class="fas fa-industry"></i></div>
@@ -32,18 +90,16 @@ Industries 2
 <div class="sb-nav-link-icon"><i class="fas fa-address-card"></i></div>
 About Us
 </a>
-
-<a class="nav-link <?php if(($pagename=='recuiter_list')||($pagename=='jobs_list')||($pagename=='job_details')){echo "collapsed active";}else{ echo "";} ?>" href="#" data-toggle="collapse" data-target="#collapseLayouts" <?php if($pagename=='recuiter_list'){echo "aria-expanded='true'";}else{ echo "aria-expanded='false'";} ?> aria-controls="collapseLayouts">
-<div class="sb-nav-link-icon"><i class="fas fa-user-tie"></i></div>
-Recruiters
-<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+<a class="nav-link" href="<?php echo base_url(); ?>admin/ourwork">
+<div class="sb-nav-link-icon"><i class="fas fa-user-edit"></i></div>
+Our Works
 </a>
-<div class="collapse <?php if(($pagename=='recuiter_list')||($pagename=='jobs_list') ||($pagename=='job_details')){echo "show";}else{ echo "";} ?>" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-<nav class="sb-sidenav-menu-nested nav">
-<a class="nav-link" href="<?php echo base_url(); ?>admin/recuiter_list"><div class="sb-nav-link-icon"><i class="fas fa-list-alt"></i></div> Recruiters List</a>
-<a class="nav-link" href="<?php echo base_url(); ?>admin/jobs_list"><div class="sb-nav-link-icon"><i class="fas fa-briefcase"></i></div> Recruiters Jobs</a>
-</nav>
-</div>
+<a class="nav-link" href="<?php echo base_url(); ?>admin/team">
+<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+Team
+</a>
+
+
 
 
 <a class="nav-link <?php if(($pagename=='events')||($pagename=='view_events')||($pagename=='detail_events')){echo "collapsed active";}else{ echo "";} ?>" href="#" data-toggle="collapse" data-target="#collapseLayoutstwo" <?php if($pagename=='recuiter_list'){echo "aria-expanded='true'";}else{ echo "aria-expanded='false'";} ?> aria-controls="collapseLayouts">
@@ -51,9 +107,10 @@ Recruiters
 Events
 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 </a>
-<div class="collapse <?php if(($pagename=='events')||($pagename=='view_events') ||($pagename=='detail_events')){echo "show";}else{ echo "";} ?>" id="collapseLayoutstwo" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+<div class="collapse <?php if(($pagename=='events')||($pagename=='view_events')||($pagename=='add_events') ||($pagename=='detail_events')){echo "show";}else{ echo "";} ?>" id="collapseLayoutstwo" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 <nav class="sb-sidenav-menu-nested nav">
 <a class="nav-link " href="<?php echo base_url(); ?>admin/events"><div class="sb-nav-link-icon"><i class="fas fa-calendar-week"></i></div> Events Category</a>
+<a class="nav-link " href="<?php echo base_url(); ?>admin/add_events"><div class="sb-nav-link-icon"><i class="fas fa-calendar-week"></i></div>Add Event</a>
 <a class="nav-link <?php if(($pagename=='view_events') ||($pagename=='detail_events')){echo "active";}?>" href="<?php echo base_url(); ?>admin/view_events"><div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div> Events List</a>
 </nav>
 </div>
@@ -70,8 +127,24 @@ Blogs
 <a class="nav-link <?php if(($pagename=='blog_list')||($pagename=='details_blogs') ){echo "active";}?>" href="<?php echo base_url(); ?>admin/blog_list"><div class="sb-nav-link-icon"><i class="fas fa-list-ol"></i></div> Blogs Lists</a>
 </nav>
 </div>
+-->
+<a class="nav-link <?php if(($pagename=='terms_conditions')||($pagename=='app_terms_conditions')||($pagename=='rec_terms_conditions')){echo "collapsed active";}else{ echo "";} ?>" href="#" data-toggle="collapse" data-target="#collapseLayoutsfour" <?php if($pagename=='recuiter_list'){echo "aria-expanded='true'";}else{ echo "aria-expanded='false'";} ?> aria-controls="collapseLayouts">
+<div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+Terms & Conditions
+<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+</a>
+<div class="collapse <?php if(($pagename=='terms_conditions')||($pagename=='rec_terms_conditions')||($pagename=='app_terms_conditions')|| ($pagename=='ven_terms_conditions')|| ($pagename=='train_terms_conditions') ){echo "show";}else{ echo "";} ?>" id="collapseLayoutsfour" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+<nav class="sb-sidenav-menu-nested nav">
+<a class="nav-link " href="<?php echo base_url(); ?>admin/terms_conditions"><div class="sb-nav-link-icon"><i class="fas fa-home"></i></div> Home</a>
+<a class="nav-link " href="<?php echo base_url(); ?>admin/app_terms_conditions"><div class="sb-nav-link-icon"><i class="fas fa-user"></i></div> Applicant</a>
+<a class="nav-link " href="<?php echo base_url(); ?>admin/rec_terms_conditions"><div class="sb-nav-link-icon"><i class="fas fa-user-tie"></i></div> Recruiter</a>
+<a class="nav-link " href="<?php echo base_url(); ?>admin/ven_terms_conditions"><div class="sb-nav-link-icon"><i class="fas fa-users"></i></div> Vendor</a>
+<a class="nav-link " href="<?php echo base_url(); ?>admin/train_terms_conditions"><div class="sb-nav-link-icon"><i class="fas fa-user-md"></i></div> Trainer</a>
 
+</nav>
+</div>
 
+ 
 
 <!-- 
 <a class="nav-link" href="<?php echo base_url(); ?>admin/slider">
@@ -79,7 +152,7 @@ Blogs
 Slider
 </a> -->
 
-<a class="nav-link" href="<?php echo base_url();?>admin/applicant_list">
+<!-- <a class="nav-link" href="<?php echo base_url();?>admin/applicant_list">
 <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
 Applicants List
 </a>
@@ -89,60 +162,15 @@ Applicants List
 Contact Us List
 </a>
 
+<a class="nav-link" href="<?php echo base_url();?>admin/super_model">
+<div class="sb-nav-link-icon"><i class="fas fa-thumbs-up"></i></div>
+Super Model
+</a> -->
 
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-<div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-Layouts
-<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-</a>
-<div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-<nav class="sb-sidenav-menu-nested nav">
-<a class="nav-link" href="layout-static.html">Static Navigation</a>
-<a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
-</nav>
-</div>
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-Pages
-<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-</a>
-<div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-<nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-Authentication
-<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-</a>
-<div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-<nav class="sb-sidenav-menu-nested nav">
-<a class="nav-link" href="login.html">Login</a>
-<a class="nav-link" href="register.html">Register</a>
-<a class="nav-link" href="password.html">Forgot Password</a>
-</nav>
-</div>
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-Error
-<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-</a>
-<div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-<nav class="sb-sidenav-menu-nested nav">
-<a class="nav-link" href="401.html">401 Page</a>
-<a class="nav-link" href="404.html">404 Page</a>
-<a class="nav-link" href="500.html">500 Page</a>
-</nav>
-</div>
-</nav>
-</div>
-<div class="sb-sidenav-menu-heading">Addons</div>
-<a class="nav-link" href="charts.html">
-<div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-Charts
-</a>
-<a class="nav-link" href="tables.html">
-<div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-Tables
-</a>
+
+
 <a class="nav-link" href="<?php echo base_url(); ?>admin/logout">
-<div class="sb-nav-link-icon"><i class="fas fa-sigin"></i></div>
+<div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
 Logout
 </a>
 </div>

@@ -50,6 +50,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'home';
-
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+/*Registration Routings */
+$route['registration'] = 'Frontendcontrollers/registration';
+$route['aspmobile'] = 'Frontendcontrollers/registration/aspmobile';
+$route['empmobile'] = 'Frontendcontrollers/registration/empmobile';
+$route['adduserasp'] = 'Frontendcontrollers/registration/adduserasp';
+$route['adduseremp'] = 'Frontendcontrollers/registration/adduseremp';
+$route['getprofiles'] = 'Frontendcontrollers/registration/getprofiles';
+
+
+/*Registration Routings */
+$route['login'] = 'Frontendcontrollers/login';
+

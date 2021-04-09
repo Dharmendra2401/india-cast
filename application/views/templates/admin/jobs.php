@@ -97,8 +97,8 @@ function btnclickdelete(id,table)
 }
 
 
-function verify(id,status,table){
-
+function verify(id,status,table,recruiter_id){
+  
     swal({
         title: "Are you sure?",
         text: "You want to active this job!",
@@ -112,7 +112,7 @@ function verify(id,status,table){
         $.ajax({
         type: 'POST',
         url: "update",
-        data: {"id":id,"status":status,"table":table},
+        data: {"id":id,"status":status,"table":table,"recruiter_id":recruiter_id},
         success: function(data112){ 
        if(data112=='ok')	
        {	
@@ -134,7 +134,7 @@ function verify(id,status,table){
 
 
 
-function unverify(id,status,table){
+function unverify(id,status,table,recruiter_id){
 
 swal({
     title: "Are you sure?",
@@ -149,8 +149,9 @@ swal({
     $.ajax({
     type: 'POST',
     url: "update",
-    data: {"id":id,"status":status,"table":table},
+    data: {"id":id,"status":status,"table":table,"recruiter_id":recruiter_id},
     success: function(data13){ 
+     
    if(data13=='ok')	
    {	
     getdata();

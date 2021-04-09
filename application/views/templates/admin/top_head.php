@@ -1,6 +1,6 @@
 <?php
   
-$pagename= basename($_SERVER['PHP_SELF']);
+  $pagename= end($this->uri->segment_array());
 ?>
 <head>
 <meta charset="utf-8" />
@@ -16,6 +16,11 @@ $pagename= basename($_SERVER['PHP_SELF']);
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet" crossorigin="anonymous" />
 <link href="<?php echo base_url(); ?>css/admincss/css/styles.css" rel="stylesheet" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>css/lightbox.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap-select.min.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>css/PagingStyle.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>css/lightbox.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap-multiselect.css">
 
 </head>
 
@@ -32,15 +37,23 @@ $pagename= basename($_SERVER['PHP_SELF']);
                <ul class="navbar-nav ml-auto ml-md-0">
                    <span id="time-part"></span>
                    <li class="nav-item dropdown">
+                       <span id="notifications"></span>
+
+                       
+                   </li>
+                   <li class="nav-item dropdown">
                        <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                            
-                           <a class="dropdown-item <?php if($pagename=='profile'){echo'active';} ?>" href="<?php echo base_url()?>admin/profile">Profile Update</a>
-                           <a class="dropdown-item" href="<?php echo base_url();?>admin/logout">Logout</a>
+                           <a class="dropdown-item <?php if($pagename=='profile'){echo'active';} ?>" href="<?php echo base_url()?>admin/profile"><i class="far fa-id-badge"></i> Profile Update</a>
+                           <a class="dropdown-item" href="<?php echo base_url();?>admin/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
                            
                           
                        </div>
+
+                       
                    </li>
+                  
                </ul>
            </nav>
 

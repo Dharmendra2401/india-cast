@@ -1,3 +1,5 @@
+
+<?php $pagename= end($this->uri->segment_array()); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,82 +9,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
+<meta name="google-signin-client_id" content="773353308271-he9l4skbvsnjrmc953s4mligp2gtjpog.apps.googleusercontent.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="<?php echo base_url(); ?>css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/sweetalert.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/jquery-ui.min.css"> 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Magra:700" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/animate.css" rel='stylesheet' type='text/css' />
-<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
-<script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
-<script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
-<script src='<?php echo base_url(); ?>js/jquery.validate.min.js'></script>  
-<script src='<?php echo base_url(); ?>js/sweetalert.min.js'></script>  
-<script src='<?php echo base_url(); ?>js/additional-methods.js'></script>  
-<script src='<?php echo base_url(); ?>js/jquery.ui.js'></script>
-<script src="<?php echo base_url(); ?>js/wow.min.js"></script>
-<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDIaVx3nzu2hMV5Aa8bTeSJxx-s3TtSrmc"></script> -->
+<link rel="stylesheet" href="<?php echo base_url(); ?>css/media.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="<?php echo base_url(); ?>css/owlcarousel/assets/owl.carousel.css" rel='stylesheet' type='text/css' />
+
+
+
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/fontawesome5/css/all.min.css">
-<script> 
-		new WOW().init();  
- </script>  
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108428907-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-108428907-1');
-</script>
   </head>
 
   <body >
-  <style>
-	.error{
-		color:red;
-	}
-   .loading{
-	   width:100%;
-	   height:100%;
-		position:fixed;
-		background-color:rgba(255,255,255,0.5);
-		z-index:9999999;
-		display:none;
-	}
-	.loading img{
-		position:absolute;
-		top:42%;
-		left:45%;
-	}
-   
-  </style>
-	<div class="loading" >
-		<img src="<?php echo base_url(); ?>/img/loading.gif" width="200px"/>
-	</div>
-<script>  
-	$("#logindiv").hide();
-</script>  
+	<!-- //navigation -->
+<div class="loader" style="display: none;">
+<i class="fas fa-circle-notch fa-spin"></i>
+</div>
+ 
 <!-- header -->
+<?php if(($pagename!='aspmobile')&&($pagename!='empmobile')){?>
 <div class="header">
 	<div class="container">
-		<div class="header-left">
+		<div class="row">
+		<div class="header-left col-md-6 col-sm-6 col-xs-12">
 			<ul>
-				<li>+91 9890726666</li>
-				<li><a href="#">info@castindia.in</a></li>
+				<li><i class="fab fa-whatsapp"></i><a href="https://wa.me/<?php echo $admin['whatsapp'];?>"> +91 <?php echo $admin['whatsapp'];?></a></li>
+				<li><i class="fas fa-envelope"></i><a href="mailto:<?php echo $admin['s_email'];?>"> <?php echo $admin['s_email'];?></a></li>
 			</ul>
 		</div>
-		<div class="header-right">
-			<ul style="float:right;">
+		<div class="header-right col-md-6 col-sm-6 col-xs-12">
+			<ul>
 			
-				<li><a href="<?php echo base_url();?>home/login">Login</a></li>
-				<li><a href="<?php echo base_url();?>home/register">Register</a></li>
-			
-				<li><a href="<?php echo base_url();?>home/login">Blogger</a></li>
-				<li><a href="<?php echo base_url();?>home/contactus">Contact Us</a></li>
+				<li><a href="<?php echo base_url().'login'?>"  >Login</a></li>
+				<li><a href="<?php echo base_url().'registration'?>"  >Register</a></li>
+				<li><a href="#contact" style="padding-right:0px;" id="#contact">Contact us</a></li>
 		
 				<!-- <li><a href="<?php echo base_url();?>/recruiter/dashboard">Recruiter</a></li>
 			
@@ -96,6 +63,8 @@
 		<div class="clearfix"></div>
 	</div>
 </div>
+</div>
+<?php } ?>
 <!-- //header -->
 <!-- logo -->
 <div id="home" class="logo">
@@ -107,6 +76,7 @@
 <!-- //logo -->
 
 <!-- navigation -->
+<?php if(($pagename!='aspmobile')&& ($pagename!='empmobile')){?>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -117,55 +87,19 @@
       </button>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <!--li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">HOME <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">CATEGORIES</a></li>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">CATEGORIES </a></li>
-            <li><a href="#">CASTING CALLS  </a></li>
-            <li><a href="#">EVENTS </a></li>
-            <li><a href="#">TIE-UPS </a></li>
-            <li><a href="#">BLOGS </a></li>
-          </ul>
-        </li-->
-		<!--li class="dropdown"><a  class="dropdown-toggle" data-toggle="dropdown" href="#"> ABOUT US <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-              <li><a href="#">FEMALE MODELS</a></li>
-              <li><a href="#">MALE MODELS</a></li>
-              <li><a href="#">MODELS BEGINNERS</a></li>
-              <li><a href="#">TEENAGER FEMALE</a></li>
-              <li><a href="#">TEENAGER MALE</a></li>
-              <li><a href="#">TEENAGER BEGINNERS</a></li>
-            </ul>
-        </li>
-		<li class="dropdown"><a  class="dropdown-toggle" data-toggle="dropdown"  href="#">PHOTOGRAPHERS  <span class="caret"></a>
-          <ul class="dropdown-menu" role="menu">
-              <li><a href="#">CELEBRITY PHOTOGRAPHERS</a></li>
-              <li><a href="#">FASHION PHOTOGRAPHER</a></li>
-              <li><a href="#">OTHERS</a></li>
-            </ul>
-        </li-->
-        <!--li><a href="#">ABOUT US</a></li>
-        <li><a href="#">CATEGORIES</a></li>
-        <li><a href="#">ADVISORY BOARD </a></li>
-        <li><a href="#">TESTIMONIALS </a></li>
-        <li><a href="#">FAQs </a></li>
-        <li><a href="#">CTA  </a></li>
-		<li><a href="<?php echo base_url();?>/contactus">CONTACT US</a></li-->
-		
-		<li><a href="<?php echo base_url().'home/about';?>">ABOUT US</a></li>
-        <li><a href="#">CATEGORIES </a></li>
-        <li><a href="<?php echo base_url().'home/calls';?>">CASTING CALLS  </a></li>
-        <li><a href="<?php echo base_url().'home/event';?>">EVENTS </a></li>
-        <li><a href="#">TIE-UPS </a></li>
-        <li><a href="<?php echo base_url();?>home/blog">BLOGS </a></li>
-        <li><a href="<?php echo base_url();?>home/recuirter_login">HIRE TALENT </a></li>
+     <ul class="nav navbar-nav">
+		 <!-- <li><a href="<?php echo base_url().'home/about';?>">ABOUT US</a></li> -->
+        <li><a href="#">Casting Calls  </a></li>
+        <li><a href="#">Categories  </a></li>
+        <li><a href="#">Blogs </a></li>
+        <li><a href="#">Tie-Ups </a></li>
+        <li><a href="#">Hire Talent </a></li>
+        <!-- <li><a href="<?php echo base_url();?>home/blog">BLOGS </a></li> -->
+        
       </ul>
     </div>
   </div>
 </nav>
-<!-- //navigation -->
+<?php } ?>
   
   

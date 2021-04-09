@@ -66,7 +66,7 @@ $profiless=''; foreach($rows as $index) {
                     <div class="col-md-3">
                     <div class="row">
                     <label class="col-md-3"><strong>Location:</strong></label>
-                    <div class="col-md-9 form-group"><textarea class="form-control" readonly><?php echo $profile['location'];?></textarea></div>
+                    <div class="col-md-9 form-group"><textarea class="form-control" placeholder="No location found" readonly><?php echo $profile['location'];?></textarea></div>
                     </div>      
                     </div>
 
@@ -77,6 +77,31 @@ $profiless=''; foreach($rows as $index) {
                     <div class="col-md-5 form-group"><?php if($profile['old_type']=='paid') {echo '<label class="text-white bg-success btn-sm">Paid</label>';} else if($profile['old_type']=='intern'){ echo '<label class="text-white bg-info btn-sm">Intern<label></label></label>';}else{  echo '<label class="text-white bg-primary btn-sm">Free<label></label></label>';} ?></div>
                     </div>      
                     </div>
+
+                    <div class="col-md-5">
+                    <div class="row">
+                    <label class="col-md-3"><strong>Created By:</strong></label>
+                    <div class="col-md-6 form-group"><?php echo '<label class="text-white bg-success btn-sm">'.$profile['firstname'].' '.$profile['lastname'];'</label>'; ?></div>
+                    </div>      
+                    </div>
+
+                    <div class="col-md-4">
+                    <div class="row">
+                    <label class="col-md-3"><strong>Status:</strong></label>
+                    <div class="col-md-9 form-group"><?php 
+                   
+                                if($profile['admin_approval']=='Y'){ 
+                                    echo "<label class='text-white bg-success btn-sm'>Approved</label>";}
+                                else{
+                                    echo "<label class='text-white bg-danger btn-sm'>Disapproved</label>";} ?></div>
+                    </div>      
+                    </div>
+
+
+
+
+                    
+                                            
 
                     <div class="col-md-12">
                     <div class="row">
@@ -101,7 +126,7 @@ $profiless=''; foreach($rows as $index) {
                 </ol>
                         <div id="gridview">
                         
-                        <?php  include 'load_applicant.php'; ?>
+                        <?php  include 'load_job_applicant.php'; ?>
                         </div>
 
 

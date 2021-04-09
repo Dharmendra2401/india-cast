@@ -87,7 +87,12 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 define('PNAME', 'Cast India');
 define('COMPANY', 'http://vihatechnosoft.com/');
 define('EMAIL_FROM', 'shuklaharsh50@gmail.com');
-define('WEBSITE_NAME','CastIndia');
+define('WEBSITE_NAME','Cast India');
+define('REGISTRATION_EMAIL','registration@castindia.in');
+define('NO_REPLY','noreply@castindia.in');
+define('ADMIN_EMAIL','noreply@castindia.in');
+
+
 date_default_timezone_set("Asia/Kolkata");
 
 

@@ -78,26 +78,28 @@ foreach( $getcatagories1 as  $catagories){
                                     echo "<label class='text-white bg-success btn-sm'>Approve</label>";}
                                 else{
                                     echo "<label class='text-white bg-danger btn-sm'>Disapprove</label>";}?></h6></div></div>
-
+                    <?php if($evntsdwtails['date_updated']!=''){?>
                    <div class="col-md-4 form-group">
                    <div class="row">
                    <label class="col-md-4"><strong>Update Date:</strong></label>
-                   <h6 class="col-md-8 rounded alert-secondary p-1" readonly><?php echo  date('d-M-Y h:i:s A',strtotime($evntsdwtails['date_updated']));?></h6></div></div>
-
+                   <h6 class="col-md-8 rounded alert-secondary p-1" readonly><?php if($evntsdwtails['date_updated']!=''){echo  date('d-M-Y h:i:s A',strtotime($evntsdwtails['date_updated']));} ;?></h6></div></div>
+                   <?php }  ?>
                    <div class="col-md-3 form-group">
                    <div class="row">
                    <label class="col-md-4"><strong>Address:</strong></label>
                    <h6 class="col-md-8 rounded alert-secondary p-1" readonly><?php echo  $evntsdwtails['address'];?></h6></div></div>
 
+                   <?php if($evntsdwtails['event_type']=='Paid') { ?>
                    <div class="col-md-4 form-group">
                    <div class="row">
                    <label class="col-md-4"><strong> Price:</strong></label>
                    <h6 class="col-md-8 rounded alert-secondary p-1" readonly><?php echo  $evntsdwtails['event_price'];?></h6></div></div>
+                   <?php } ?>
 
                    <div class="col-md-4 form-group">
                    <div class="row">
                    <label class="col-md-4"><strong> Type:</strong></label>
-                   <h6 class="col-md-8 rounded text-capitalize" readonly><?php if($evntsdwtails['event_type']=='paid') {echo '<label class="text-white bg-success btn-sm">Paid</label>';} else if($evntsdwtails['event_type']=='intern'){ echo '<label class="text-white bg-info btn-sm">Intern<label></label></label>';}else{  echo '<label class="text-white bg-primary btn-sm">Free<label></label></label>';} ?></h6></div></div>
+                   <h6 class="col-md-8 rounded text-capitalize" readonly><?php if($evntsdwtails['event_type']=='Paid') {echo '<label class="text-white bg-success btn-sm">Paid</label>';} else if($evntsdwtails['event_type']=='intern'){ echo '<label class="text-white bg-info btn-sm">Intern<label></label></label>';}else{  echo '<label class="text-white bg-primary btn-sm">Free<label></label></label>';} ?></h6></div></div>
 
                    <div class="col-md-3 form-group">
                    <div class="row">
@@ -122,10 +124,28 @@ foreach( $getcatagories1 as  $catagories){
                    <div class=" col-md-12" readonly><textarea id="termscondition" disabled> <?php echo $evntsdwtails['termsandconditions']; ?></textarea></div></div></div>
                    
 
-                   <div class="col-md-12 form-group">
+                   <div class="col-md-6 form-group">
                    <div class="row">
-                   <label class="col-md-12"><strong> Image:</strong></label>
-                   <div class=" col-md-12" readonly><?php echo $evntsdwtails['event_image']; ?></div></div></div>
+                   <label class="col-md-12"><strong>Banner Image:</strong></label>
+                   <div class=" col-md-12 pt-2" readonly> <a data-lightbox="example-8" href="<?php echo base_url().'uploads/events/bimage/'. $evntsdwtails['event_image']; ?>"><img src="<?php echo base_url().'uploads/events/bimage/'.$evntsdwtails['event_image']; ?>" width="100%">
+                    </a> <div >
+                   
+                   </div></div></div></div>
+                   
+
+                   <div class="col-md-6 form-group">
+                   <div class="row">
+                   <label class="col-md-12"><strong>Gallery Image:</strong></label>
+                   <?php $getgallery=explode(',',$evntsdwtails['gallary_images']); foreach($getgallery as $showg) {?>
+                   <div class="col-md-3 p-2" >
+                    <div class="image-overlay">
+                    <a data-lightbox="example-12" href="<?php echo base_url().'uploads/events/'. $showg; ?>"><img src="<?php echo base_url().'uploads/events/'. $showg; ?>" class="image-grid">
+                    </a>
+                   </div>
+                    </div>
+                   <?php } ?>
+                   </div>
+                   </div>
                   
 
                    </div>

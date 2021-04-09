@@ -17,10 +17,11 @@ $title="Dashboard";
                     
                 <div class="row">
                     <div class="col-md-8">
-                    <ol class="bg-info text-white breadcrumb mb-4 bg-info">
+                    <!-- <ol class="bg-info text-white breadcrumb mb-4 bg-info">
                     <li class="breadcrumb-item active text-white events-icon"><i class="fas fa-list-alt"></i>   Total Status</li>
-                </ol>
-                        <table id="example1" class="table table-striped table-bordered shadow" width='100%'>
+
+                </ol>-->
+                        <!-- <table id="example1" class="table table-striped table-bordered shadow" width='100%'>
                             <thead>
                                 <tr>
                                     <th>S.No</th>
@@ -62,15 +63,20 @@ $title="Dashboard";
                                 </tr>
                             </tbody>
 
-                        </table>
+                        </table> -->
                     </div>
                     <div class="col-md-4">
-                    <ol class="bg-info text-white breadcrumb mb-0 bg-info events-head">
+                    <!-- <ol class="bg-info text-white breadcrumb mb-0 bg-info events-head">
                     <li class="breadcrumb-item active text-white events-icon"><i class="fas fa-calendar-alt"></i> Ongoing Events</li>
                     </ol>
                 <ul class="event-dashboard">
                 <?php foreach($geteventt as $event){?>
-                    <li><i class="fas fa-chevron-right text-success"></i><a href="<?php echo base_url()?>admin/detail_events?token=<?php echo base64_encode($event['id']);?>"><?php echo $event['event_title']; ?></a></li>
+                    <li><p class="dateeventtop"><i class="fas fa-chevron-right text-success"></i><a href="<?php echo base_url()?>admin/detail_events?token=<?php echo base64_encode($event['id']);?>"><?php echo $event['event_title']; ?></a></p>
+                    <p>
+                    <span class="col-md-6 text-left date" title="startdate"><small><strong><i class="far fa-calendar-check text-success"></i></strong>: <?php echo date('d-M-Y',strtotime($event['startdate'])) ;?></small></span>
+                    <span class="col-md-6 text-right date" title="enddate"><small><strong><i class="far fa-calendar-times text-danger"></i></strong>: <?php echo date('d-M-Y',strtotime($event['enddate'])) ;?></small></span>
+                </p>
+                    </li>
                     <?php } if($geteventt[0]==''){?>
                         <li>No event found</li>
 
@@ -79,7 +85,7 @@ $title="Dashboard";
                 <a href="<?php echo base_url();?>admin/view_events"class="btn btn-info view-all">View all</a>
                     </div>
 
-                </div><br>
+                </div><br> -->
                  </div>
                 </main>
                 <?php include "footer.php";  ?>
