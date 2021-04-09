@@ -121,7 +121,7 @@ function btnclickdelete(id,table)
 }
 
 
-function verify(id,status,table,classname){
+function verify(id,status,table,type_id,type_user){
     swal({
         title: "Are you sure?",
         text: "You want to active this event catagory!",
@@ -135,8 +135,9 @@ function verify(id,status,table,classname){
         $.ajax({
         type: 'POST',
         url: "update",
-        data: {"id":id,"status":status,"table":table},
+        data: {"id":id,"status":status,"table":table,"recruiter_id":type_id,"type_user":type_user},
         success: function(data112){ 
+            alert(data112);
        if(data112=='ok')	
        {	
         getdata();
@@ -158,7 +159,7 @@ function verify(id,status,table,classname){
 
 
 
-function unverify(id,status,table){
+function unverify(id,status,table,type_id,type_user){
 
 swal({
     title: "Are you sure?",
@@ -173,8 +174,9 @@ swal({
     $.ajax({
     type: 'POST',
     url: "update",
-    data: {"id":id,"status":status,"table":table},
+    data: {"id":id,"status":status,"table":table,"recruiter_id":type_id,"type_user":type_user},
     success: function(data13){ 
+        alert(data13);
    if(data13=='ok')	
    {	
     getdata();

@@ -57,7 +57,7 @@ $title="Slider/ Content";
 
                         <div class="form-group">
                             <label><span class="text-danger">*</span> Image</label><br>
-                            <input type="file"  name="profile_image" id="profile_image" max-size="30" >
+                            <input type="file"  name="sliderimage" id="profile_image"  >
                         </div>
                         <span id="imageerror"></span>
                     </div>
@@ -95,17 +95,17 @@ $title="Slider/ Content";
 
                         <div class="form-group">
                             <label>Image</label><br>
-                            <input type="file"  name="profile_image" class="profile_image" id="profile_imagetwo" max-size="30" ><br><br>
+                            <input type="file"  name="profile_imagetwo" class="profile_image" id="profile_imagetwo" max-size="30" ><br><br>
                             <image id="uimage"  width="100px">
                         </div>
-                        <span id="imageerror"></span>
+                        <span id="imageerrortwo"></span>
                         <input type="hidden" id="oldimage" name="oldimage">
                         <input type="hidden" id="uid" name="uid">
 
                     </div>
                     <div class="modal-footer bg-light text-dark">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" name="update" class="btn btn-primary" value="update" onclick="">Update</button>
+                        <button type="submit" name="update" class="btn btn-primary" value="update" onclick="return    updatetwo()">Update</button>
                     </div>
                     </form>
                 </div>
@@ -124,7 +124,12 @@ $("#profile_image").change(function (e) {
     if ((file = this.files[0])) {
         img = new Image();
         img.onload = function () {
-        if((this.width!=584) && (this.height!=448)){
+        if((this.width<=584)){
+            $('#profile_image').val('');
+            $('#profile_image').focus();
+            $('#imageerror').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Sorry! Please select the size of image 584*448 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+        }
+        else if((this.height<=448)){
             $('#profile_image').val('');
             $('#profile_image').focus();
             $('#imageerror').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Sorry! Please select the size of image 584*448 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
@@ -159,12 +164,6 @@ function addUser(){
             return false;
 
    }
-   else if(content>=800){
-            $('#content').focus();
-            $('#imageerror').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Please enter maximum 768 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
-            return false;
-
-   }
 
    else if(image.trim()==''){
             $('#profile_image').focus();
@@ -172,6 +171,32 @@ function addUser(){
             return false;
 
    }else{
+    return true;
+
+   }
+ 
+
+
+}
+
+function updatetwo(){
+  var title=$('#utitle').val();
+  var content=CKEDITOR.instances['ucontent'].getData().replace(/<[^>]*>/gi, '').length;
+ 
+   if(title.trim()==''){
+            $('#utitle').focus();
+            $('#imageerrortwo').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Please enter title<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+            return false;
+
+   }
+   else if(content==0){
+            $('#ucontent').focus();
+            $('#imageerrortwo').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Please enter content<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+            return false;
+
+   }
+
+else{
     return true;
 
    }
@@ -312,7 +337,28 @@ swal({
 
 }
 
+$("#profile_imagetwo").change(function (e) {
+    var file, img;
+    if ((file = this.files[0])) {
+        img = new Image();
+        img.onload = function () {
+        if((this.width<=584)){
+            $('#profile_imagetwo').val('');
+            $('#profile_imagetwo').focus();
+            $('#imageerrortwo').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Sorry! Please select the size of image 584*448 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+        }
+        else if((this.height<=448)){
+            $('#profile_imagetwo').val('');
+            $('#profile_imagetwo').focus();
+            $('#imageerrortwo').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Sorry! Please select the size of image 584*448 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+        } else{
+            $('#imageerror').html('');
 
+        }    
+        };
+        img.src = _URL.createObjectURL(file);
+    }
+});
 
 </script>
 

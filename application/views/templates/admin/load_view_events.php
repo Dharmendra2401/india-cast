@@ -3,8 +3,9 @@
                                 <tr>
                                     <th >S.No</th>
                                     <th >Event Id</th>
-                                    <th>Event Title</th>
+                                    <th width="300px">Event Title</th>
                                     <th>Created Date</th>
+                                    <th>Created By</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -15,9 +16,6 @@
                                     $status="<label class='text-white bg-success btn-sm'>Approve</label>";}
                                 else{
                                     $status="<label class='text-white bg-danger btn-sm'>Disapprove</label>";}
-
-                                
-                                
                                 ?>
                             
                                 <tr class="row<?php echo $i; ?>">
@@ -26,14 +24,15 @@
                                     <td><?php echo $index['event_title']; ?></td>
                                     
                                     <td><?php echo date('d-M-Y h:i:s A',strtotime($index['date_created'])); ?></td>
-                                    <td class="text-center"><?php echo $status;?> 
+                                    <td class="text-center"> <label class='text-white bg-secondary btn-sm text-capitalize'><?php if($index['added_by']!=''){echo $index['added_by']; }else{ echo "Not found";}; ?></label> <br></td>
+                                    <td class="text-center"><?php echo $status;?>  </td>
                                    
-                                    </td>
+                                   
                                     <td class="tablebutton">
                                     <?php if($index['approve']=='Y'){ ?>
-                                    <a href="#" title="Click here to disapprove" data-toggle="modal"  onclick="return unverify('<?php echo $index['id']; ?>','N','events');" class="rounded btn btn-sm btn-success"><i class="fas fa-check"></i></a>
+                                    <a href="#" title="Click here to disapprove" data-toggle="modal"  onclick="return unverify('<?php echo $index['id']; ?>','N','events','<?php echo $index['added_id']; ?>','<?php echo $index['added_by']; ?>');" class="rounded btn btn-sm btn-success"><i class="fas fa-check"></i></a>
                                     <?php }else{ ?>
-                                    <a href="#" title="Click here to approve" data-toggle="modal"  onclick="return verify('<?php echo $index['id']; ?>','Y','events');" class="rounded btn btn-sm btn-danger"><i class="fas fa-times"></i></a>
+                                    <a href="#" title="Click here to approve" data-toggle="modal"  onclick="return verify('<?php echo $index['id']; ?>','Y','events','<?php echo $index['added_id']; ?>','<?php echo $index['added_by']; ?>');" class="rounded btn btn-sm btn-danger"><i class="fas fa-times"></i></a>
                                     <?php } ?>
                                    
 

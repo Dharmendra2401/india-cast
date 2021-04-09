@@ -1,6 +1,7 @@
+<?php $page='Blogs'; $banner=$admin['banner_blog'] ;?>
 <?php $this->load->view('/common/header'); ?>
 <!--script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script-->
-<link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+
 <style>
     .img_overflow{    
         position: relative;
@@ -27,9 +28,7 @@
         padding: 15px;
     }
 </style>
-<div class="col-md-12 somi">
-	<img src="<?php echo base_url(); ?>/images/blog/blog-banner.jpg" class="img_res"/> 
-</div>
+<?php include 'bedcrumb.php';?>
 <div class="clearfix"></div>
 <div class="container">
 	<div class="row">

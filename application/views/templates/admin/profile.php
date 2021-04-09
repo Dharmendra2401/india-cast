@@ -24,7 +24,7 @@ $title="Profile Update";
                 </ol>
                 <div class="form-top">
               
-                <form class="row" method="post" action="<?php echo base_url();?>admin/profile">
+                <form class="row" method="post" action="<?php echo base_url();?>admin/profile" autocomplete="off">
                     <div class="col-md-6">
                     <div class="form-group">
                         <label><span class="text-danger">*</span> First Name </label>
@@ -79,22 +79,69 @@ $title="Profile Update";
                     </div>
                     <div class="col-md-6">
                     <div class="form-group">
-                        <label> Google Url </label>
-                        <input type="url" class="form-control" name="googleurl"  placeholder="Enter google url" maxlength="200" value="<?php echo $row['google']; ?>"  id="googleurl">
+                        <label> Linkdin</label>
+                        <input type="url" class="form-control" name="linkdinurl"  placeholder="Enter linkdin url" maxlength="200" value="<?php echo $row['linkdin']; ?>"  id="linkdinurl">
                     </div>
                     </div>
 
                     <div class="col-md-6">
                     <div class="form-group">
+                        <label> Twitter</label>
+                        <input type="url" class="form-control" name="twitterurl"  placeholder="Enter twiter url" maxlength="200" value="<?php echo $row['twitter']; ?>"  id="twitterurl">
+                    </div>
+                    </div>
+
+                    <div class="col-md-6">
+                    <div class="form-group">
+                        <label><span class="text-danger">*</span> City One </label>
+                        <input type="text" class="form-control" name="cityone"  placeholder="Enter city one" maxlength="20" id="cityone" autocomplete="off" value="<?php echo $row['cityone']; ?>">
+                        
+                    </div>
+                    </div>
+
+                    <div class="col-md-6">
+                    <div class="form-group">
+                        <label><span class="text-danger">*</span> Address One</label>
+                        <textarea type="text" class="form-control" name="addressone"  placeholder="Enter address one" maxlength="150" id="addressone" autocomplete="off"><?php echo $row['addressone']; ?></textarea>
+                        <div id="map" style="display:none;"></div>
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                    <div class="form-group">
+                        <label><span class="text-danger">*</span> City Two </label>
+                        <input type="text" class="form-control" name="citytwo"  placeholder="Enter city two " maxlength="20" value="<?php echo $row['citytwo']; ?>" id="citytwo" autocomplete="off">
+                        
+                    </div>
+                    </div>
+
+                    <div class="col-md-6">
+                    <div class="form-group">
+                        <label><span class="text-danger">*</span> Address Two</label>
+                        <textarea type="text" class="form-control" name="addresstwo"  placeholder="Enter address two " maxlength="200" id="addresstwo" autocomplete="off"><?php echo $row['addresstwo']; ?></textarea>
+                        <div id="mapone" style="display:none;"></div>
+                    </div>
+                    </div>
+                    <div class="col-md-12">
+                    <div class="form-group">
                         <label><span class="text-danger">*</span> Google Iframe Url </label>
                         <input type="url" class="form-control" name="googlemap"  placeholder="Enter google iframe map url" maxlength="500" value="<?php echo $row['googlemap']; ?>"  id="googlemap">
                     </div>
                     </div>
-
+                    <div class="col-md-12">
+                    <p class="bg-info text-white breadcrumb mb-0 bg-info"> Meta Content</p><br>
+                    </div>
                     <div class="col-md-12">
                     <div class="form-group">
-                        <label><span class="text-danger">*</span> Address </label>
-                        <textarea type="text" class="form-control" name="address"  placeholder="Enter address " maxlength="150" id="address"><?php echo $row['address']; ?></textarea>
+                        <label><span class="text-danger">*</span> Description </label>
+                        <textarea type="text" class="form-control" name="description"  placeholder="Enter description " maxlength="200" id="description" autocomplete="off"><?php echo $row['description']; ?></textarea>
+                        
+                    </div>
+                    </div>
+                    <div class="col-md-12">
+                    <div class="form-group">
+                        <label><span class="text-danger">*</span> Keywords </label>
+                        <textarea type="text" class="form-control" name="keyword"  placeholder="Enter keyword " maxlength="200" id="keyword" autocomplete="off"><?php echo $row['keyword']; ?></textarea>
+                       
                     </div>
                     </div>
                     <div class="col-md-12">
@@ -182,9 +229,15 @@ $title="Profile Update";
                 var facebook=$('#facebookurl').val();
                 var instagram=$('#instagramurl').val();
                 var google=$('#googleurl').val();
-                var address=$('#address').val();
+                var address=$('#addressone').val();
+                var addresstwo=$('#addresstwo').val();
+                var cityone=$('#cityone').val();
+                var citytwo=$('#citytwo').val();
                 var googlemap=$('#googlemap').val();
                 var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+                var description=$('#description').val();
+                var keyword=$('#keyword').val();
+                
 
                 if(firstname.trim()==''){
                     $('#firstname').focus();
@@ -231,8 +284,26 @@ $title="Profile Update";
                     return false;
 
                 }
+                else if(cityone.trim()==''){
+                    $('#cityone').focus();
+                    $('#errormessage').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Please enter city one <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                    return false;
+
+                }
+                else if(citytwo.trim()==''){
+                    $('#citytwo').focus();
+                    $('#errormessage').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Please enter city two <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                    return false;
+
+                }
                 else if(address.trim()==''){
-                    $('#address').focus();
+                    $('#addressone').focus();
+                    $('#errormessage').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Please enter address <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                    return false;
+
+                }
+                else if(addresstwo.trim()==''){
+                    $('#addresstwo').focus();
                     $('#errormessage').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Please enter address <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
                     return false;
 
@@ -243,6 +314,19 @@ $title="Profile Update";
                     return false;
 
                 }
+                else if(description.trim()==''){
+                    $('#description').focus();
+                    $('#errormessage').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Please enter description <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                    return false;
+
+                }
+                else if(keyword.trim()==''){
+                    $('#keyword').focus();
+                    $('#errormessage').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Please enter keywords <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                    return false;
+
+                }
+                
 
                 
                 else{
@@ -309,7 +393,90 @@ $title="Profile Update";
                 }
             }
 
-       </script>
-        
+            function initAutocomplete() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -33.8688, lng: 151.2195},
+          zoom: 13,
+          mapTypeId: 'roadmap'
+        });
+
+        var maps = new google.maps.Map(document.getElementById('mapone'), {
+          center: {lat: -33.8688, lng: 151.2195},
+          zoom: 13,
+          mapTypeId: 'roadmap'
+        });
+		
+		
+        // Create the search box and link it to the UI element.
+	
+        var input = document.getElementById('addressone');
+        var inputtwo = document.getElementById('addresstwo');
+		
+		
+        var searchBox = new google.maps.places.SearchBox(input);
+        var searchBoxtwo = new google.maps.places.SearchBox(inputtwo);
+		
+		
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+		
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+	
+        });
+		
+		
+        var markers = [];
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+          if (places.length == 0) {
+            return;
+          }
+          // Clear out the old markers.
+          markers.forEach(function(marker) {
+            marker.setMap(null);
+          });
+          markers = [];
+          // For each place, get the icon, name and location.
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+			
+            // Create a marker for each place.
+            markers.push(new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              position: place.geometry.location
+            }));
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+			   
+            }
+          });
+          map.fitBounds(bounds);
+		 
+        });
+	
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3sJI07ongMwp7n98CSQRhLDDm0B1LIVA&libraries=places&callback=initAutocomplete"
+         async defer></script>
     </body>
 </html>

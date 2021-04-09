@@ -1,3 +1,4 @@
+<?php $page='Events'; $banner=$admin['banner_event'] ;?>
 <?php $this->load->view('/common/header'); ?>
 <style>
 .pick_mind{
@@ -105,52 +106,20 @@
 
 </style>
 
-
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="<?php echo base_url(); ?>images/1.jpg" alt="Los Angeles" style="width:100%;">
-      </div>
-
-      <div class="item">
-        <img src="<?php echo base_url(); ?>images/1.jpg" alt="" style="width:100%;">
-      </div>
-    
-      <div class="item">
-        <img src="<?php echo base_url(); ?>images/1.jpg" alt="" style="width:100%;">
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</div>
-
+<?php include 'bedcrumb.php';?>
+<?php print_r($gettype);?>
 <div class="col-sm-12 pick_mind">
-			<button class="filter-buttonet switch_bt 2 active11" data-filter="2" onclick="event_type_function('2')">Festival</button>
-	
-		<h4 class="font_ST">Pick your Mood</h4>
+<?php $itype=1; foreach($gettype as $type){?>
+	<button class="filter-buttonet switch_bt <?php echo $type['id'];?> <?php if($itype==1){ echo 'active11';} ?>" data-filter="<?php echo $type['id'];?>" onclick="event_type_function('<?php echo $type['id'];?>')"><?php echo $type['name'];?></button>
+<?php $itype++;} ?>
 </div>
 
 <div class="container">
         <div class="row">
 		<div align="center" class="">
 			            <button class="filter-button all active111" data-filter="all">All</button>
-							<button class="filter-button filteret et2  et2 " data-filter="9" data-filteret="2">Film Festivals</button>
+						<button class="filter-button filteret et2  et2 " data-filter="9" data-filteret="2">Film Festivals</button>
+						<button class="filter-button filteret et3  et3 " data-filter="3" data-filteret="3">Movies</button>
 				            <!--<button class="filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
             <button class="filter-button" data-filter="spray">Spray Nozzle</button>
             <button class="filter-button" data-filter="irrigation">Irrigation Pipes</button>-->
@@ -158,6 +127,26 @@
         <br/>
 
 		<div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter 9_et2 et2" id="9">
+				<div class="img_overflow">
+					<img src="<?php echo base_url(); ?>images/events/59b77f5aa35a7408.jpg" class="img-responsive">
+					<div class="text_heading11"> 
+						<h4>Tag a friend</h4>
+													<!--<h4>Rs. 700<br/><span class="text_small11">Onwards<span></h4>-->
+							
+												<p class="date_display">Oct 20 2017 
+													- Oct 27 2017</p><p>
+											</p></div>
+				</div>
+				<div class="col-md-12 bg_cont">
+					<h4 title="Impact A 2 Min Shortfilm Festival">Impact A 2 Min Shortfilm F...</h4>
+					<!--<p>Impact A 2 Min Shortfilm Festival</p>-->
+												<span class="category_st" title="Film Festivals">Film Festivals</span>
+																	<br>
+                                        <a class="btn_cuatro" href="<?php echo base_url().'home/eventsdetail';?>">Book Now</a>
+				</div>
+			</div>
+			
+			<div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter 9_et3 et3" id="3">
 				<div class="img_overflow">
 					<img src="<?php echo base_url(); ?>images/events/59b77f5aa35a7408.jpg" class="img-responsive">
 					<div class="text_heading11"> 

@@ -19,9 +19,9 @@ class Home extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-	public function emailbody($to,$subject,$message){
+	public function emailbody($sendfrom,$to,$subject,$message){
 		$this->load->view('mailactive/index');	
-		sendmails($to,$message,$subject);	
+		sendmails($sendfrom,$to,$message,$subject);	
 	}
 
 	public function verify(){
@@ -45,14 +45,15 @@ class Home extends CI_Controller {
         $this->load->library("pagination");
 		$this->load->model('Main_model');
 		$this->load->library('email');
+		
 		//$this->load->library('upload');
 	}
-
+	
 	public function checkemail()
 	{
-		$email=$_POST['email'];
-		$mobile=$_POST['mobile'];
-		$table=$_POST['table'];
+		$email=trim($_POST['email']);
+		$mobile=trim($_POST['mobile']);
+		$table=trim($_POST['table']);
 		$getcount=$this->Main_model->emailverification($email,$table,$mobile);
 		if($getcount!=0){
 			echo "true";
@@ -63,11 +64,7 @@ class Home extends CI_Controller {
 		}
 	}
 
-	public function forgotemail()
-	{
-		
-	}
-
+	
 	public function checkmobile()
 	{
 		$email=$_POST['email'];
@@ -84,49 +81,88 @@ class Home extends CI_Controller {
 	}
 
 	public function index()
-	{
-		$this->load->view('templates/index');
+	{   
+		$admindet=$this->Main_model->admin_details();
+		$banner=$this->Main_model->banner();
+		$vedio=$this->Main_model->getvedio();
+		$hired_hire=$this->Main_model->gethired_hire();
+		$faq=$this->Main_model->faq();
+		$getlogo=$this->Main_model->recentemp();
+		$users=$this->Main_model->usercontent();
+		$testmonials=$this->Main_model->testimonals();
+
+		$admin['admin']=$admindet;
+		$getfaq['getfaq']=$faq;
+		$indtwo['indtwo']=$industriestwo;
+		$getvedio['getvedio']=$vedio;
+		$get_hired_hire['get_hired_hire']=$hired_hire;
+		$allbanner['banner']=$banner;
+		$alllogo['alllogo']=$getlogo;
+		$getalluser['getalluser']=$users;
+		$gettest['gettest']=$testmonials;
+		$alldata=array_merge_recursive($admin,$getvedio,$get_hired_hire,$allbanner,$getfaq,$alllogo,$getalluser,$gettest);
+		
+		$this->load->view('templates/index',$alldata);
 	}
 
 
 
-	public function about()
-	{
-		$this->load->view('templates/aboutus');
+	public function quessend(){
+		if($this->input->post('quessend')){
+			trim($this->form_validation->set_rules('quesfullname','quesfullname','required'));
+			trim($this->form_validation->set_rules('quesemail','quesemail','required'));
+			trim($this->form_validation->set_rules('quesaddress','quesaddress','required'));
+			if($this->form_validation->run()==true){
+				$ques=array();
+				$ques['fullname']=trim($this->input->post('quesfullname'));
+				$ques['email']=trim($this->input->post('quesemail'));
+				$ques['question']=trim($this->input->post('quesaddress'));
+				$this->Main_model->addquestion($ques);
+				$subject='Question Regarding '.WEBSITE_NAME.'';
+				$mess='';
+				$mess.='<p>Dear Admin</p>';
+				$mess.='<p>A '.$ques['fullname'].' ask you a question</p>';
+				$mess.='<p><strong>Full Name</strong>: '.$ques['fullname'].' <br> <strong>Email</strong>: '.$ques['email'].'<br> <strong>Question</strong>: '.$ques['question'].'</p>';
+				$mess.='<p><strong>Regards,<br>Team Cast India</strong></p>';
+				$message=$mess;
+				$this->emailbody(NO_REPLY,ADMIN_EMAIL,$subject,$message);
+
+				$messtwo='';
+				$messtwo.='<p>Dear '.$ques['fullname'].'</p>';
+				$messtwo.='<p>Thankyou for raising your question. We will get back as soon as possible.if any query email us  <a href=mailto:'.EMAIL_FROM.'>'.EMAIL_FROM.'</a> </p>';
+				$messtwo.='<p><strong>Regards,<br>Team Cast India</strong></p>';
+
+				$messagetwo=$messtwo;
+				
+				//$this->emailbody(NO_REPLY,$ques['email'],$subject,$messagetwo);
+				$this->session->set_flashdata('error','<div class="alert alert-success alert-dismissible show" role="alert">Successfull! Thankyou for contacting us. We will get in touch as soon as possible  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'); redirect(base_url().'#form-qestion');
+
+			}$this->session->set_flashdata('error','<div class="alert alert-danger alert-dismissible show" role="alert">Sorry! Please fill out the fields and try again <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'); redirect(base_url().'#form-qestion');
+
+
+		}
 	}
 
 
 
-	public function calls()
-	{
-		$this->load->view('templates/calls.php');
-	}
 
-	public function event()
-	{
-		$this->load->view('templates/events.php');
-	}
-	public function blog()
-	{
-		$this->load->view('templates/blogs.php');
-	}
-
-	public function login()
-	{
-		$this->load->view('templates/user_login.php');
-	}
-
-	public function user_register()
-	{
-		$this->load->view('templates/register.php');
-	}
+	
 	public function terms_condition()
 	{
-		$this->load->view('templates/terms_condition.php');
+		$admindet=$this->Main_model->admin_details();
+		$id=base64_decode($_REQUEST['token']);
+		$term_con=$this->Main_model->terms_condition($id);
+		$admin['admin']=$admindet;
+		$termcon['termcon']=$term_con;
+		$term_condition=array_merge_recursive($admin,$termcon);
+		$this->load->view('templates/terms_condition.php',$term_condition);
 	}
 	public function contactus()
 	{
-		$this->load->view('templates/contactus.php');
+		$admindet=$this->Main_model->admin_details();
+		$admin['admin']=$admindet;
+		$contact_us=array_merge_recursive($admin);
+		$this->load->view('templates/contactus.php',$contact_us);
 
 		if($this->input->post('submit')){
 			trim($this->form_validation->set_rules('name','name','required'));
@@ -155,10 +191,7 @@ class Home extends CI_Controller {
 			}
 		}
 	}
-	public function eventsdetail()
-	{
-		$this->load->view('templates/events_detail.php');
-	}
+	
 	
 
 
@@ -181,67 +214,128 @@ class Home extends CI_Controller {
 		}
 	}
 
-	public function recuiter_registration()
-	{
-		$this->load->view('templates/recuiter_registration');
-		if($this->input->post('register')){
-			
+	
 
-			$this->form_validation->set_rules('company_name','company_name','required');
-			$this->form_validation->set_rules('firstname','firstname','required');
-			$this->form_validation->set_rules('lastname','lastname','required');
-			$this->form_validation->set_rules('contact_no','contact_no','required');
-			$this->form_validation->set_rules('email','email','required');
-			$this->form_validation->set_rules('gstno','gst','required');
-			$this->form_validation->set_rules('panno','panno','required');
-			
-			if($this->form_validation->run()==true){
-				$recuiter=array();
-				$recuiter['firstname']=$this->input->post('firstname');
-				$recuiter['lastname']=$this->input->post('lastname');
-				$recuiter['contact_no']=$this->input->post('contact_no');
-				$recuiter['email']=$this->input->post('email');
-				$recuiter['gst']=$this->input->post('gstno');
-				$recuiter['pan']=$this->input->post('panno');
-				$recuiter['category']=$this->input->post('category');
-				$recuiter['date_created']=date('Y-m-d h:m:s');
-				$password=$this->input->post('password');
-				$cpassword=$this->input->post('cpassword');
-				$table="recruiter";
-				$email=$this->input->post('email');
-				$mobile=$this->input->post('contact_no');
-				$getcount=$this->Main_model->emailverification($email,$table,$mobile);
-				if($getcount==0){
-				if($password==$cpassword){
-					
-					$to=$this->input->post('email');
-					$subject="Successfully Registered With ".WEBSITE_NAME." ";
-					$mess="";
-					$mess.="<p>Dear ".$recuiter['firstname']." ".$recuiter['lastname'].",</p>";
-					$mess.="<p>You are successfully registered with ".WEBSITE_NAME." as a applicant. Please click <a href='".base_url()."home/verify?email=".base64_encode($recuiter['email'])."'>here</a> to verify your email.</p>";
-					$message=$mess;
-					$this->emailbody($to,$subject,$message);
-					$recuiter['password']=base64_encode($cpassword);
-					$this->Main_model->addrecuiter($recuiter);
-					$this->session->set_flashdata('error','<div class="alert alert-success alert-dismissible show" role="alert">You are successfully registered. Please check your email for email verification  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'); redirect(base_url().'home/recuiter_registration');
-				}else{
-					$this->session->set_flashdata('error','<div class="alert alert-danger alert-dismissible show" role="alert">Sorry!Please fill out the fields and try again<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'); redirect(base_url().'home/recuiter_registration');
+	
 
-				}
-				
-			
-				}
-					$this->session->set_flashdata('error','<div class="alert alert-danger alert-dismissible show" role="alert">Sorry! The email or contact no you entered is already registered with us<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'); redirect(base_url().'home/recuiter_registration');
-
-				}else{
-					$this->session->set_flashdata('error','<div class="alert alert-danger alert-dismissible show" role="alert">Sorry!Please fill out the fields and try again<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'); redirect(base_url().'home/recuiter_registration');	
+	public function emailverify(){
+		$token=base64_decode($_REQUEST['token']);
+		$this->Main_model->emailverify($token);
+		$this->session->set_flashdata('error','<div class="alert alert-success alert-dismissible show" role="alert"> Your email is verified successfully <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+		redirect(base_url().'registration');
 
 
+	}
 
+	
+	
+	public function validmobile(){
+		$mobile=trim($_REQUEST['aspmobile']);
+		if($mobile!=''){
+			$getvalue=$this->Main_model->validmobile($mobile);
+			if($getvalue==0){
+				echo "ok";
+			}else{
+				echo "false";
 			}
+
 		}
+
+	}
+
+	public function validemail(){
+		$aspemail=trim($_REQUEST['aspemail']);
+		$aspmobile='';
+		if($aspemail!=''){
+			$getvalue=$this->Main_model->validemail($aspemail,$aspmobile);
+			if($getvalue==0){
+				echo "ok";
+			}else{
+				echo "false";
+			}
+
+		}
+
+	}
+
+	public function otpreq(){
+		$otpone=$_REQUEST['otpone'];
+		$otptwo=$_REQUEST['otptwo'];
+		$otpthree=$_REQUEST['otpthree'];
+		$otpfour=$_REQUEST['otpfour'];
+		$mobilenumber=$_REQUEST['mobilenumber'];
+		$otp=$otpone.''.$otptwo.''.$otpthree.''.$otpfour;
+		$apiKey = urlencode('NzAzN2M4ODJhODQ5YTVhNTJkNWQxY2ExZmMwZGJjYzU=');
+		// Message details
+		$numbers = array($mobilenumber);
+		$sender = urlencode('GLCAIN');
+		//$message = rawurlencode('Hello testing');
+		//$message = rawurlencode('The One Time Password (OTP) for registration at Cast India is '.$otp.'.Please use this OTP to login. It is only valid for 01.00 minutes. Do not share this code with anyone for security reasons.');
+		$message = rawurlencode('The One Time Password (OTP) for registration at Cast India is '.$otp.'. Do not share this code with anyone for security reasons.');
+		//$message = rawurlencode('The One Time Password (OTP) for Cast India login is XXXX. Please use this OTP to login. It is only valid for XXXXminutes. Do not share this code with anyone for security reasons.');
+
+		$numbers = implode(',', $numbers);
+		// Prepare data for POST request
+		$data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+		// Send the POST request with cURL
+		$ch = curl_init('https://api.textlocal.in/send/');
+		curl_setopt($ch, CURLOPT_POST, true);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		$response = curl_exec($ch);
+		curl_close($ch);
+		$getdata=json_decode($response, true);
+		echo $getdata['status'];
+
+		exit;
+	// $array=array();
+	//  $datas=json_encode($response);
+	//  $array=$response;
+	//  echo $array['status'];
+
+	
 	}
 
 
+
+	public function otplogin(){
+		$otpone=$_REQUEST['otpone'];
+		$otptwo=$_REQUEST['otptwo'];
+		$otpthree=$_REQUEST['otpthree'];
+		$otpfour=$_REQUEST['otpfour'];
+		$mobilenumber=$_REQUEST['mobilenumber'];
+		$otp=$otpone.''.$otptwo.''.$otpthree.''.$otpfour;
+		$apiKey = urlencode('NzAzN2M4ODJhODQ5YTVhNTJkNWQxY2ExZmMwZGJjYzU=');
+		// Message details
+		$numbers = array($mobilenumber);
+		$sender = urlencode('GLCAIN');
+		//$message = rawurlencode('Hello testing');
+		//$message = rawurlencode('The OTP for your '.WEBSITE_NAME.' is :'.$otp.' ');
+		$message = rawurlencode('The One Time Password (OTP) for Cast India login is '.$otp.'. Please use this OTP to login. It is only valid for XXXXminutes. Do not share this code with anyone for security reasons.');
+
+		$numbers = implode(',', $numbers);
+		// Prepare data for POST request
+		$data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+		// Send the POST request with cURL
+		$ch = curl_init('https://api.textlocal.in/send/');
+		curl_setopt($ch, CURLOPT_POST, true);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		$response = curl_exec($ch);
+		curl_close($ch);
+		$getdata=json_decode($response, true);
+		echo $getdata['status'];
+
+		exit;
+	// $array=array();
+	//  $datas=json_encode($response);
+	//  $array=$response;
+	//  echo $array['status'];
+
+	
+	}
+
+	
+	
 
 }

@@ -96,24 +96,47 @@ $profiless=''; foreach($rows as $index) {
                     <div class="col-md-4">
                     <div class="row">
                     <label class="col-md-4"><strong>Date Created:</strong></label>
-                    <div class="col-md-8 form-group"><input class="form-control" readonly value="<?php echo date('d-M-Y h:i:s A',strtotime($profile['date_created']));?> "> </div>
+                    <div class="col-md-8 form-group"><input class="form-control" readonly value="<?php echo date('d-M-Y h:i:s A',strtotime($row['date_created']));?> "> </div>
                     </div>      
                     </div>
 
                     <div class="col-md-5">
                     <div class="row">
                     <label class="col-md-4"><strong>Date Updated:</strong></label>
-                    <div class="col-md-8 form-group"><input class="form-control" placeholder="No date found" readonly value="<?php if($profile['date_updated']!=''){echo date('d-M-Y h:i:s A',strtotime($profile['date_updated']));}?>"> </div>
+                    <div class="col-md-8 form-group"><input class="form-control" placeholder="No date found" readonly value="<?php if($row['update_date']!=''){echo date('d-M-Y h:i:s A',strtotime($row['update_date']));}?>"> </div>
                     </div>      
                     </div>
 
                     <div class="col-md-3">
                     <div class="row">
                     <label class="col-md-3"><strong>Location:</strong></label>
-                    <div class="col-md-9 form-group"><textarea class="form-control" readonly><?php echo $profile['location'];?></textarea></div>
+                    <div class="col-md-9 form-group"><textarea class="form-control" readonly><?php echo $row['location'];?></textarea></div>
                     </div>      
                     </div>
 
+                    <div class="col-md-3">
+                    <div class="row">
+                    <label class="col-md-3"><strong>Marital Status:</strong></label>
+                    <div class="col-md-9 form-group"><input class="form-control" placeholder="Not found" readonly value="<?php if($row['marital_status']!=''){echo $row['marital_status'];}?>"></div>
+                    </div>      
+                    </div>
+
+                    <div class="col-md-3">
+                    <div class="row">
+                    <label class="col-md-3"><strong>City:</strong></label>
+                    <div class="col-md-9 form-group"><input class="form-control" placeholder="Not found" readonly value="<?php if($row['City']!=''){echo $row['City'];}?>"></div>
+                    </div>      
+                    </div>
+
+                    <div class="col-md-3">
+                    <div class="row">
+                    <label class="col-md-3"><strong>Pincode:</strong></label>
+                    <div class="col-md-9 form-group"><input class="form-control" placeholder="Not found" readonly value="<?php if($row['pincode']!=''){echo $row['pincode'];}?>"></div>
+                    </div>      
+                    </div>
+
+
+                     
 
                     <div class="col-md-3">
                     <div class="row">
