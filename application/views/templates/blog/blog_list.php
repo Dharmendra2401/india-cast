@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 <?php error_reporting(0);?>
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 <div id="content" class="site-main">	
 	<section class="block-slider block-slider-one">
 		<div class="container">
@@ -31,14 +28,10 @@
 												<div class="meta-tag">
 													<div class="meta-time">
 														<a href="#" >
-<<<<<<< HEAD
-															<?php echo $blogs_slider['date_created']?>									
-=======
 															<?php  $blogs_slider['date_created'];
 																			$timestamp = strtotime($blogs_slider['date_created']);
 																			echo date("Y-M-d", $timestamp);
 																			?>	
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 														</a>
 													</div>
 													<div class="meta-author">
@@ -76,8 +69,6 @@
 							<div class="row"></div>
 							<div class="row list-post ">
 								<?php 
-<<<<<<< HEAD
-=======
 				                    if($search_param){
 				                        foreach ($search_param as $param ) {?>
 											<div class="col-12">
@@ -135,16 +126,15 @@
 				</div>
 				<?php if(!$search_param) : ?>
 
-				<div class="col-md-8" id="main-wrap">
+				<div class="col-md-12" id="main-wrap">
 					<div class="post-section">
 						<div class="content-wrap">
 							<div class="row"></div>
 							<div class="row list-post ">
 								<?php 
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 				                    if($blogs){
 				                        foreach ($blogs as $blog ) {?>
-											<div class="col-12">
+											<div class="col-6">
 												<article id="post-36" class="post post-36 type-post status-publish format-standard has-post-thumbnail hentry category-effective-research category-uncategorized">
 												<div class="row">
 													<div class="col-lg-6">
@@ -157,28 +147,19 @@
 															<div class="post-content">
 																<header class="entry-header">
 																	<div class="entry-meta-cat">
-<<<<<<< HEAD
-																		<a href="<?php echo base_url('blog/blog_details/'.$blog['id'])?>"><?php  echo $this->db->get_where('blog_category', array('id'=>$blog['blog_category_id']))->row()->name;  ?></a>
-=======
-																		<a href="<?php echo base_url('blog/blog_list/'.$blog['blog_category_id'])?>"><?php  echo $this->db->get_where('blog_category', array('id'=>$blog['blog_category_id']))->row()->name;  ?></a>
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
+																		<a href="javascript:void(0)"><?php  echo $this->db->get_where('blog_category', array('id'=>$blog['blog_category_id']))->row()->name;  ?></a>
 																	</div>
 																	<h3 class="entry-title">
 																		<a href="<?php echo base_url('blog/blog_details/'.$blog['id'])?>"><?php echo $blog['blog_title']?></a>
 																	</h3>
 																	<div class="meta-tag">
 																		<div class="meta-time">
-<<<<<<< HEAD
-																			<a href="#l" >
-																			<?php echo $blog['date_created']?>						</a>
-=======
 																			<a>
 																			<?php  $blog['date_created'];
 																			$timestamp = strtotime($blog['date_created']);
 																			echo date("Y-M-d", $timestamp);
 																			?>						
 																		</a>
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 																		</div>
 																		<div class="meta-author">
 																			<a href="#">
@@ -191,13 +172,8 @@
 																	</div>
 																</header>
 																<div class="post-text">
-<<<<<<< HEAD
-																	<p>&#8230;
-
-=======
 																	<p>
 																		<?php echo $blog['short_desc']?>&#8230;
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 																	</p>
 																</div>
 															</div>
@@ -210,61 +186,8 @@
 						</div>
 					</div>
 				</div>
-<<<<<<< HEAD
-=======
 				<?php endif; ?>
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
-				<div class="col-12 col-md-4">
-					<sidebar class="sidebar clearfix" id="primary-sidebar">
-						<div id="search-2" class="widget widget_search">
-							<form role="search" method="post" action="<?php echo base_url(); ?>blog/search_param" id="searchform" class="searchform" action="#">
-								<div>
-									<label class="screen-reader-text" for="s">Search for:</label>
-<<<<<<< HEAD
-									<input type="text" value="" name="title" id="s" />
-=======
-									<input type="text" name="blog_title" id="s" />
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
-								</div>
-								<button type="submit" class="search-button"><span class="kfi kfi-search"></span></button>
-							</form>
-						</div>		
-						<div id="recent-posts-2" class="widget widget_recent_entries">		
-							<h2 class="widget-title">Recent Posts</h2>		
-							<ul>
-								<?php 
-				                    if($blogs_limits){
-				                        foreach ($blogs_limits as $blogs_limit ) {?>
-								<li>
-									<a href="<?php echo base_url('blog/blog_details/'.$blogs_limit['id'])?>"><?php echo $blogs_limit['blog_title']?></a>
-								</li>
-								<?php } }?>	
-							</ul>
-						</div>
-<<<<<<< HEAD
-						<div id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">Recent Comments</h2><ul id="recentcomments"></ul>
-						</div>
-						<div id="archives-2" class="widget widget_archive"><h2 class="widget-title">Archives</h2>	 <ul>
-							<li><a href='#'>April 2021</a></li>
-=======
-						<div id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">Search by Category</h2>
-						    <ul>
-							<?php 
-				                    if($blog_category){
-				                        foreach ($blog_category as $blog_category ) {?>
-								<li>
-									<a href="<?php echo base_url('blog/blog_list/'.$blog_category['id'])?>"><?php echo $blog_category['name']?></a>
-								</li>
-								<?php } }?>	
-						</ul>
-						</div>
-						<div id="archives-2" class="widget widget_archive"><h2 class="widget-title">Archives</h2>	 <ul>
-							<!-- <li><a href='#'>April 2021</a></li> -->
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
-						</ul>
-						</div>	
-					</sidebar>
-				</div>			
+						
 			</div>						
 		</div>
 	</section>

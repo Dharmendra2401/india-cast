@@ -360,6 +360,7 @@ class Home extends CI_Controller {
 		$alldata=array_merge_recursive($admin,$getvedio,$get_hired_hire,$allbanner,$getfaq,$alllogo,$getalluser,$gettest);
 		$this->load->view("templates/aboutus",$alldata);
 	}
+<<<<<<< HEAD
 	public function life_at_ci(){
 		$admindet=$this->Main_model->admin_details();
 		$banner=$this->Main_model->banner();
@@ -492,5 +493,7 @@ class Home extends CI_Controller {
 		$alldata=array_merge_recursive($admin,$getvedio,$get_hired_hire,$allbanner,$getfaq,$alllogo,$getalluser,$gettest);
 		$this->load->view("templates/category",$alldata);
 	}
+=======
+>>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 
 }

@@ -3878,7 +3878,10 @@ label > input[type="radio"] {
   .radio-label{color:#6D6D6D;width:100%;}
   .margin-radio span{opacity: 0.5;}
   .grey{color: #999;}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
   /*--------------------------About Us Page CSS----------------------------*/
 @media (min-width: 1281px) {
   
@@ -4089,6 +4092,16 @@ label > input[type="radio"] {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 @media (min-width: 768px) and (max-width: 1024px) {
   
   .welcome_heading{
@@ -4295,6 +4308,22 @@ label > input[type="radio"] {
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
   .welcome_heading{
@@ -4835,6 +4864,7 @@ label > input[type="radio"] {
 		color: #FFFFFF;
 		text-align: center;
 	}
+<<<<<<< HEAD
 /*--------------------------Life at Cast India CSS----------------------------*/
 
 }
@@ -5019,4 +5049,6 @@ margin-left: 10%;
     margin-left: 49%;
     margin-top: 30px;
     margin-bottom: 48px;
+=======
+>>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 }

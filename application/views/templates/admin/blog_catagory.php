@@ -46,7 +46,7 @@ $title="Blogs Category";
                     <form method="post" action="<?php echo base_url()?>admin/blog_catagories">
                         <div class="form-group">
                             <label><span class="text-danger">*</span> Blog Category</label><br>
-                            <input type="text"  placeholder="Enter event catagory" id="blog" name="blog" class="form-control" maxlength ="30" >
+                            <input type="text"  placeholder="Enter category" id="blog" name="blog" class="form-control" maxlength ="30" >
                         </div>
                         <span id="errormessage"></span>
                     </div>
@@ -73,7 +73,7 @@ $title="Blogs Category";
                     <form method="post" action="<?php echo base_url()?>admin/blog_catagories">
                         <div class="form-group">
                             <label><span class="text-danger">*</span> Event Category</label><br>
-                            <input type="text"  placeholder="Enter event catagory" id="ublog" name="ublog" class="form-control" maxlength ="30" >
+                            <input type="text"  placeholder="Enter category" id="ublog" name="ublog" class="form-control" maxlength ="30" >
                         </div>
                         <input type="hidden"  id="uid" name="uid" >
                         <span id="errormessagetwo"></span>

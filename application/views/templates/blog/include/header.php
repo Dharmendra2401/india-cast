@@ -51,6 +51,7 @@
 						<span class="kfi kfi-close-alt2"></span>
 					</div>
 					<div class="header-search-wrap">
+<<<<<<< HEAD
 						<form role="search" method="get" id="searchform" class="searchform" action="#">
 							<div>
 								<label class="screen-reader-text" for="s">Search for:</label>
@@ -58,6 +59,16 @@
 								<input type="submit" id="searchsubmit" value="Search" />
 							</div>
 							<button type="submit" class="search-button"><span class="kfi kfi-search"></span></button></form>	</div>
+=======
+						<form role="search" method="post" action="<?php echo base_url(); ?>blog/search_param" id="searchform" class="searchform" action="#">
+								<div>
+									<label class="screen-reader-text" for="s">Search for:</label>
+									<input type="text" name="blog_title" id="s" />
+								</div>
+								<button type="submit" class="search-button"><span class="kfi kfi-search"></span></button>
+							</form>
+					</div>
+>>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 							<div id="primary-nav-offcanvas" class="offcanvas-navigation d-xl-none d-lg-block">
 								<ul>
 									<li>
@@ -78,7 +89,12 @@
 									<div class="col-7 col-lg-2">
 										<div class="site-branding-outer">
 											<div class="site-branding">
+<<<<<<< HEAD
 												<a href="index.html" class="custom-logo-link" rel="home" itemprop="url"><img width="710" height="356" src="<?php echo base_url()?>templates/blog/asset/uploads/2019/11/cropped-logo.png" class="custom-logo" alt="" itemprop="logo" srcset="" sizes="(max-width: 710px) 100vw, 710px" /></a>		
+=======
+												<a href="<?php echo base_url() ;?>home" class="custom-logo-link" rel="home" itemprop="url"><img width="120" height="60" src="<?php echo base_url()?>templates/blog/asset/uploads/2019/11/cropped-logo.png" class="custom-logo" alt="" itemprop="logo" srcset="" sizes="(max-width: 710px) 100vw, 710px" /></a>
+												
+>>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 											</div><!-- .site-branding -->
 										</div>
 									</div>
@@ -121,7 +137,16 @@
 								<div class="container">
 									<div class="site-branding-outer">
 										<div class="site-branding">
+<<<<<<< HEAD
 											<a href="index.html" class="custom-logo-link" rel="home" itemprop="url"><img width="188" height="94" src="<?php echo base_url()?>templates/blog/asset/uploads/2019/11/cropped-logo.png" class="custom-logo" alt="" itemprop="logo" srcset="" sizes="(max-width: 710px) 100vw, 710px" /></a>		
+=======
+										    <h1 style="margin-bottom:25px;">
+											<a  href="<?php echo base_url() ;?>home" class="custom-logo-link" rel="home" itemprop="url"><img width="107" height="68" src="<?php echo base_url()?>templates/blog/asset/uploads/2019/11/cropped-logo.png" class="custom-logo" alt="" itemprop="logo" srcset="" sizes="(max-width: 710px) 100vw, 710px" /></a>	
+											</h1>
+											<h1 style="margin-bottom:-20px;">
+		                                        <p style="font-size:14px;">Launching India’s Finest.</p>
+	                                        </h1>
+>>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 										</div><!-- .site-branding -->
 									</div>
 								</div>
@@ -166,6 +191,7 @@
 							<!-- Search form structure -->
 							<div class="header-search-wrap">
 								<div id="search-form">
+<<<<<<< HEAD
 									<form role="search" method="get" id="searchform" class="searchform" action="#">
 										<div>
 											<label class="screen-reader-text" for="s">Search for:</label>
@@ -175,6 +201,15 @@
 										<button type="submit" class="search-button">
 											<span class="kfi kfi-search"></span></button>
 									</form>		
+=======
+									<form role="search" method="post" action="<?php echo base_url(); ?>blog/search_param" id="searchform" class="searchform" action="#">
+								<div>
+									<label class="screen-reader-text" for="s">Search for:</label>
+									<input type="text" name="blog_title" id="s" />
+								</div>
+								<button type="submit" class="search-button"><span class="kfi kfi-search"></span></button>
+							</form>	
+>>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 								</div>
 							</div>
 						</header>	

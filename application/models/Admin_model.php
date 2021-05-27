@@ -20,7 +20,7 @@ Class Admin_model extends CI_Model {
 	
 
 		public function __construct() {
-		  parent::__construct(); 
+		  parent::__construct();   
 		}
 
 		public function notifications($id,$table,$getricid,$getuser){
@@ -633,43 +633,43 @@ Class Admin_model extends CI_Model {
 			}
 
 
-			public function countrecruiter(){
-			$this->db->where('delete_flag', 'N');
-				$this->db->from('recruiter');
-				$result=$this->db->count_all_results();
-				return $result;
-			}
-			public function countapplicant(){
-			$this->db->where('delete_flag', 'N');
-			$this->db->from('user');
-			$result1=$this->db->count_all_results();
-			return $result1;
-		}
-		public function countevent(){
-			$this->db->where('delete_flag', 'N');
-			$this->db->from('events');
-			$result1=$this->db->count_all_results();
-			return $result1;
-		}
+// 			public function countrecruiter(){
+// 			$this->db->where('delete_flag', 'N');
+// 				$this->db->from('recruiter');
+// 				$result=$this->db->count_all_results();
+// 				return $result;
+// 			}
+// 			public function countapplicant(){
+// 			$this->db->where('delete_flag', 'N');
+// 			$this->db->from('user');
+// 			$result1=$this->db->count_all_results();
+// 			return $result1;
+// 		}
+// 		public function countevent(){
+// 			$this->db->where('delete_flag', 'N');
+// 			$this->db->from('events');
+// 			$result1=$this->db->count_all_results();
+// 			return $result1;
+// 		}
 		public function countblog(){
 			$this->db->where('delete_flag', 'N');
 			$this->db->from('blogs');
 			$result1=$this->db->count_all_results();
 			return $result1;
 		}
-		public function countjob(){
-			$this->db->where('delete_flag', 'N');
-			$this->db->from('jobs');
-			$result12=$this->db->count_all_results();
-			return $result12;
-		}
+// 		public function countjob(){
+// 			$this->db->where('delete_flag', 'N');
+// 			$this->db->from('jobs');
+// 			$result12=$this->db->count_all_results();
+// 			return $result12;
+// 		}
 
-		public function evntdashboard(){
-			$currentdate=date('Y-m-d');
-			$eventdas=$this->db->query('SELECT startdate,enddate,event_title,id FROM events where  delete_flag="N" and (startdate<="'.$currentdate.'"  and  enddate>="'.$currentdate.'") order by enddate asc ');
-			$getresult = $eventdas->result_array();
-			return $getresult;
-		}
+// 		public function evntdashboard(){
+// 			$currentdate=date('Y-m-d');
+// 			$eventdas=$this->db->query('SELECT startdate,enddate,event_title,id FROM events where  delete_flag="N" and (startdate<="'.$currentdate.'"  and  enddate>="'.$currentdate.'") order by enddate asc ');
+// 			$getresult = $eventdas->result_array();
+// 			return $getresult;
+// 		}
 
 		public function contactus(){
 				$contactuss=$this->db->query('SELECT * from contact_us order by id desc');
@@ -945,6 +945,7 @@ Class Admin_model extends CI_Model {
 		}
 
 			
+<<<<<<< HEAD
 
 		public function do_resize($filename)
 {
@@ -996,11 +997,28 @@ public function img_upload()
     }*/
   }
 	
+=======
+		function save_blog($data)
+	  	{               
+	        $this->db->insert('blogs',$data);  
+	       return $id= $this->db->insert_id();
+	  	}
+			
+        function update_blog($data, $id)
+        {  
+             $this->db->where(array('id'=>$id))->update('blogs', $data);    
+        }
+        function update_blog_id($data1, $id)
+        {  
+             $this->db->where(array('id'=>$id))->update('blogs', $data1);    
+        }
+			
+>>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 
 			 
 
 			
-			
+
 
 			
 

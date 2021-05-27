@@ -76,8 +76,16 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
+<<<<<<< HEAD
+	'username' => 'castindi_demo01',
+	'password' => 'Viha@123',
+=======
 	'username' => 'root',
 	'password' => '',
+<<<<<<< HEAD
+=======
+>>>>>>> c40f2341efec47e3db7c4855a36440f3313179c7
+>>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 	'database' => 'castindi_castindia_demo',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

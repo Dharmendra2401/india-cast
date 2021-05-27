@@ -27,5 +27,9 @@
 </script>
 <script type='text/javascript' src='<?php echo base_url()?>templates/blog/asset/js/main.js'></script>
 <script type='text/javascript' src='<?php echo base_url()?>templates/blog/asset/js/wp-embed.min8d9d.js?ver=4.9.16'></script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 </body>
 </html>

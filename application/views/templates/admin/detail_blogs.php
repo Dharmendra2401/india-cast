@@ -87,7 +87,10 @@ foreach( $getcatagories1 as  $catagories){
                    <div class="col-md-12 form-group">
                    <div class="row">
                    <label class="col-md-12"><strong> Image:</strong></label>
-                   <div class=" col-md-12" readonly><?php echo $rows['blog_images']; ?></div></div></div>
+                   <div class=" col-md-12" readonly>
+                      
+                       <img src="<?php echo base_url('images/blog/'.$rows['blog_images'])?>" id="blah" class="user-auth-img img-circle" style="height: 150px!important;width: 150px!important;" /> 
+                       </div></div></div>
                    
                     
                     </div>
