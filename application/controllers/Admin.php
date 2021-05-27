@@ -673,7 +673,6 @@ public function forgotpass()
 
 	    
 
-<<<<<<< HEAD
 
 	}
 	public function save_blog(){
@@ -708,7 +707,7 @@ public function forgotpass()
                     /*print_r($error); exit();*/
                 }
 
-=======
+
 
 	}
 	public function save_blog(){
@@ -741,17 +740,15 @@ public function forgotpass()
                     /*print_r($error); exit();*/
                 }
 
->>>>>>> c40f2341efec47e3db7c4855a36440f3313179c7
                 $data['blog_title'] = $this->input->post('blog_title');
                 $data['description'] = $this->input->post('description');
                 $data['short_desc'] = $this->input->post('short_desc');
                 $data['blog_category_id'] = $this->input->post('blog_category_id');
                 
-<<<<<<< HEAD
+
                 $page_data['save_blog'] = $this->Admin_model->save_blog($data);
-=======
+
                 $page_data['save_blog'] = $this->Backend_Model->save_blog($data);
->>>>>>> c40f2341efec47e3db7c4855a36440f3313179c7
                 redirect('admin/blog_list', $page_data);
 	}
 	function blog_list(){
