@@ -3,22 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	
 	public function __construct() 
 	{
         parent:: __construct();
@@ -28,6 +12,8 @@ class Admin extends CI_Controller {
 		$this->load->library('email');
 		//$this->load->library('upload');
 		$this->load->view('library/upload.php');
+		//$this->load->library('upload');
+    	$this->load->library('image_lib');
 		
 	}
 
@@ -150,12 +136,12 @@ class Admin extends CI_Controller {
 	{
 		$getadmin=$this->session->userdata('admin');
 		$this->Admin_model->authtrue();
-		$countr=$this->Admin_model->countrecruiter();
-		$counta=$this->Admin_model->countapplicant();
-		$countevent=$this->Admin_model->countevent();
-		$countblog=$this->Admin_model->countblog();
-		$countjob=$this->Admin_model->countjob();
-		$getevent=$this->Admin_model->evntdashboard();
+		//$countr=$this->Admin_model->countrecruiter();
+		//$counta=$this->Admin_model->countapplicant();
+		// $countevent=$this->Admin_model->countevent();
+		// $countblog=$this->Admin_model->countblog();
+		// $countjob=$this->Admin_model->countjob();
+		// $getevent=$this->Admin_model->evntdashboard();
 		
 		$countra['countra']=$countr;
 		$countrb['countrb']=$countevent;
@@ -673,14 +659,106 @@ public function forgotpass()
 
 
 	}
+	public function add_blog(){
+		$this->Admin_model->authtrue();
+		$this->load->view('templates/admin/add_blog.php');
+	}
+	public function edit_blog($id){
+		$this->Admin_model->authtrue();
+		$page_data['edit_blog'] = $this->db->get_where('blogs', array('id'=>$id))->row_array();
+		$this->load->view('templates/admin/edit_blog.php',$page_data);
+	}
+	public function do_resize($filename)
+	{
 
+	    
+
+
+	}
+	public function save_blog(){
+				$this->Admin_model->authtrue();
+				 $config['upload_path'] = 'images/blog';
+                $config['allowed_types'] = 'gif|jpeg|jpg|png';
+                $config['max_size'] = '2048000';
+                $this->load->library('upload', $config);
+                if($this->upload->do_upload('blog_images')){
+                    $file = $this->upload->data();
+                    
+                
+                    $source_path =  'images/' . $filename;
+	    			$target_path =  'images/blog/thumb_'.$filename;
+                    
+				    $config_manip = array(
+
+				        'image_library' => 'gd2',
+				        'source_image' => $source_path,
+				        'new_image' => $target_path,
+				        'maintain_ratio' => TRUE,
+				        'width' => 1200,
+				        'height' => 710
+				    );
+				    $this->image_lib->initialize($config_manip);
+				    $this->load->library('image_lib', $config_manip);
+				    //print_r($config_manip);die();
+				    $data['blog_images'] = $file['file_name'];
+                }
+                else{
+                    $error = array('error' => $this->upload->display_errors());
+                    /*print_r($error); exit();*/
+                }
+
+                $data['blog_title'] = $this->input->post('blog_title');
+                $data['description'] = $this->input->post('description');
+                $data['short_desc'] = $this->input->post('short_desc');
+                $data['blog_category_id'] = $this->input->post('blog_category_id');
+                
+                $page_data['save_blog'] = $this->Admin_model->save_blog($data);
+                redirect('admin/blog_list', $page_data);
+	}
 	function blog_list(){
 		$this->Admin_model->authtrue();
 		$row=$this->Admin_model->blog_list();
 		$row['row']=$row;
 		$this->load->view('templates/admin/blog_list.php',$row);
 	}
+    public function update_blog($id){
+				$this->Admin_model->authtrue();
+				 $config['upload_path'] = 'images/blog';
+                $config['allowed_types'] = 'gif|jpeg|jpg|png';
+                $config['max_size'] = '2048000';
+                $this->load->library('upload', $config);
+                if($this->upload->do_upload('blog_images')){
+                    $file = $this->upload->data();
+                    $data['blog_images'] = $file['file_name'];
+                
+                    $source_path =  'images/' . $filename;
+	    			$target_path =  'images/blog/thumb_'.$filename;
 
+				    $config_manip = array(
+
+				        'image_library' => 'gd2',
+				        'source_image' => $source_path,
+				        'new_image' => $target_path,
+				        'maintain_ratio' => TRUE,
+				        'width' => 1200,
+				        'height' => 710
+				    );
+				    $this->image_lib->initialize($config_manip);
+				    $this->load->library('image_lib', $config_manip);
+                }
+                else{
+                    $error = array('error' => $this->upload->display_errors());
+                    /*print_r($error); exit();*/
+                }
+
+                $data['blog_title'] = $this->input->post('blog_title');
+                $data['description'] = $this->input->post('description');
+                $data['short_desc'] = $this->input->post('short_desc');
+                $data['blog_category_id'] = $this->input->post('blog_category_id');
+                
+                $page_data['update_blog'] = $this->Admin_model->update_blog($data, $id);
+                redirect('admin/blog_list', $page_data);
+	}
 	function details_blogs(){
 		$this->Admin_model->authtrue();
 		$id=base64_decode($_REQUEST['token']);

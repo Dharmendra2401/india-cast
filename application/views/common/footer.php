@@ -26,7 +26,7 @@
 			
 			<div class="col-md-offset-2 col-md-3 col-sm-3 col-xs-6 contact-grid footers-link text-left">
 			<h4 class="text-white">Interact</h4></span>
-			<span><a href="#">The Clique</a></span>
+			<span><a href="<?php echo base_url()?>home/aboutus">The Clique</a></span>
 				<span><a href="#">Cover, uncover</a></span>
 				<span><a href="#">Talk the Talk</a></span>
 				

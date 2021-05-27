@@ -114,7 +114,7 @@ Events
 <a class="nav-link <?php if(($pagename=='view_events') ||($pagename=='detail_events')){echo "active";}?>" href="<?php echo base_url(); ?>admin/view_events"><div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div> Events List</a>
 </nav>
 </div>
-
+-->
 
 <a class="nav-link <?php if(($pagename=='blog_catagories')||($pagename=='blog_list')||($pagename=='details_blogs') ){echo "collapsed active";}else{ echo "";} ?>" href="#" data-toggle="collapse" data-target="#collapseLayoutsthree" <?php if($pagename=='recuiter_list'){echo "aria-expanded='true'";}else{ echo "aria-expanded='false'";} ?> aria-controls="collapseLayouts">
 <div class="sb-nav-link-icon"><i class="fas fa-blog"></i></div>
@@ -127,7 +127,7 @@ Blogs
 <a class="nav-link <?php if(($pagename=='blog_list')||($pagename=='details_blogs') ){echo "active";}?>" href="<?php echo base_url(); ?>admin/blog_list"><div class="sb-nav-link-icon"><i class="fas fa-list-ol"></i></div> Blogs Lists</a>
 </nav>
 </div>
--->
+
 <a class="nav-link <?php if(($pagename=='terms_conditions')||($pagename=='app_terms_conditions')||($pagename=='rec_terms_conditions')){echo "collapsed active";}else{ echo "";} ?>" href="#" data-toggle="collapse" data-target="#collapseLayoutsfour" <?php if($pagename=='recuiter_list'){echo "aria-expanded='true'";}else{ echo "aria-expanded='false'";} ?> aria-controls="collapseLayouts">
 <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
 Terms & Conditions

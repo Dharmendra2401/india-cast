@@ -5,7 +5,7 @@
                                     <th width="10%">Blog Id</th>
                                     <th width="30%">Blog Title</th>
                                     <th>Created Date</th>
-                                    <th>Status</th>
+                                    <!--<th>Status</th>-->
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -26,14 +26,16 @@
                                     <td><?php echo $index['blog_title']; ?></td>
                                     
                                     <td><?php echo date('d-M-Y h:i:s A',strtotime($index['date_created'])); ?></td>
-                                    <td class="text-center"><?php echo $status;?> 
+                                    <!--<td class="text-center"><?php echo $status;?> 
                                    
-                                    </td>
+                                    </td>-->
                                     <td class="tablebutton">
+                                        <a href="<?php echo base_url('admin/edit_blog/'.$index['id']);?>" class="rounded btn btn-sm btn-success"><i class="fas fa-pencil-alt"></i></a>
                                     <?php if($index['approve']=='Y'){ ?>
-                                    <a href="#" title="Click here to disapprove" data-toggle="modal"  onclick="return unverify('<?php echo $index['id']; ?>','N','blogs');" class="rounded btn btn-sm btn-success"><i class="fas fa-check"></i></a>
+                                    
+                                    <!--<a href="#" title="Click here to disapprove" data-toggle="modal"  onclick="return unverify('<?php echo $index['id']; ?>','N','blogs');" class="rounded btn btn-sm btn-success"><i class="fas fa-check"></i></a>-->
                                     <?php }else{ ?>
-                                    <a href="#" title="Click here to approve" data-toggle="modal"  onclick="return verify('<?php echo $index['id']; ?>','Y','blogs');" class="rounded btn btn-sm btn-danger"><i class="fas fa-times"></i></a>
+                                    <!--<a href="#" title="Click here to approve" data-toggle="modal"  onclick="return verify('<?php echo $index['id']; ?>','Y','blogs');" class="rounded btn btn-sm btn-danger"><i class="fas fa-times"></i></a>-->
                                     <?php } ?>
                                    
 

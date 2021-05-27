@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'http://localhost/cast-india/';
+$config['base_url'] = 'https://castindia.in/cast-india-blog';
 //if(isset($_SERVER['HTTP']) && $_SERVER['HTTP'] == "on"){$ssl_set = "s";} else{$ssl_set = "";}
 //$config['base_url'] = "http".$ssl_set."://".$_SERVER['HTTP_HOST'];
 
