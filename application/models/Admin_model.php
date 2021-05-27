@@ -20,7 +20,7 @@ Class Admin_model extends CI_Model {
 	
 
 		public function __construct() {
-		  parent::__construct();   
+		  parent::__construct(); 
 		}
 
 		public function notifications($id,$table,$getricid,$getuser){
@@ -945,59 +945,6 @@ Class Admin_model extends CI_Model {
 		}
 
 			
-<<<<<<< HEAD
-
-		public function do_resize($filename)
-{
-
-    $source_path =  'images/blog' . $filename;
-    $target_path =  'images/blog/thumb_'.$filename;
-
-    $config_manip = array(
-
-        'image_library' => 'gd2',
-        'source_image' => $source_path,
-        'new_image' => $target_path,
-        'maintain_ratio' => TRUE,
-        'width' => 150,
-        'height' => 150
-    );
-    $this->image_lib->initialize($config_manip);
-    $this->load->library('image_lib', $config_manip);
-
-
-    if (!$this->image_lib->resize()) {
-        echo $this->image_lib->display_errors();
-        die();
-    }
-}
-
-public function img_upload()
-{
-    $config = array(
-        'upload_path' => "images",
-        'allowed_types' => "*",
-        'overwrite' => TRUE,
-        'max_size' => "5048000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
-        'max_height' => "3000",
-        'max_width' => "3000"
-    );
-    $this->upload->initialize($config);
-    $this->load->library('upload', $config);
-
-    if($this->upload->do_upload()) {
-        $response   =    array('upload_data' => $this->upload->data());
-        $this->do_resize($response['upload_data']['file_name']);
-
-    }
-    /*else{
-        $error              =   array('error'=>$this->upload->display_errors());
-        //print_r($error);die(); 
-
-    }*/
-  }
-	
-=======
 		function save_blog($data)
 	  	{               
 	        $this->db->insert('blogs',$data);  
@@ -1013,12 +960,11 @@ public function img_upload()
              $this->db->where(array('id'=>$id))->update('blogs', $data1);    
         }
 			
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 
 			 
 
 			
-
+			
 
 			
 

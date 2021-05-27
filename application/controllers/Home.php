@@ -360,7 +360,6 @@ class Home extends CI_Controller {
 		$alldata=array_merge_recursive($admin,$getvedio,$get_hired_hire,$allbanner,$getfaq,$alllogo,$getalluser,$gettest);
 		$this->load->view("templates/aboutus",$alldata);
 	}
-<<<<<<< HEAD
 	public function life_at_ci(){
 		$admindet=$this->Main_model->admin_details();
 		$banner=$this->Main_model->banner();
@@ -471,29 +470,5 @@ class Home extends CI_Controller {
 		$alldata=array_merge_recursive($admin,$getvedio,$get_hired_hire,$allbanner,$getfaq,$alllogo,$getalluser,$gettest);
 		$this->load->view("templates/career_apply",$alldata);
 	}
-	public function category(){
-		$admindet=$this->Main_model->admin_details();
-		$banner=$this->Main_model->banner();
-		$vedio=$this->Main_model->getvedio();
-		$hired_hire=$this->Main_model->gethired_hire();
-		$faq=$this->Main_model->faq();
-		$getlogo=$this->Main_model->recentemp();
-		$users=$this->Main_model->usercontent();
-		$testmonials=$this->Main_model->testimonals();
-
-		$admin['admin']=$admindet;
-		$getfaq['getfaq']=$faq;
-		$indtwo['indtwo']=$industriestwo;
-		$getvedio['getvedio']=$vedio;
-		$get_hired_hire['get_hired_hire']=$hired_hire;
-		$allbanner['banner']=$banner;
-		$alllogo['alllogo']=$getlogo;
-		$getalluser['getalluser']=$users;
-		$gettest['gettest']=$testmonials;
-		$alldata=array_merge_recursive($admin,$getvedio,$get_hired_hire,$allbanner,$getfaq,$alllogo,$getalluser,$gettest);
-		$this->load->view("templates/category",$alldata);
-	}
-=======
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 
 }

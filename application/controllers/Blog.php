@@ -16,15 +16,11 @@ class Blog extends CI_Controller {
 	public function index()
 	{
 	    $page_data['blog_category']=$this->Main_model->get_blog_category();
-
 		$page_data['blogs']=$this->Main_model->get_blog_list();
 		$page_data['blogs_limits']=$this->Main_model->get_blog_limit();
 		$page_data['blogs_sliders']=$this->Main_model->get_blog_sliders();
 		$this->render_blog('templates/blog/blog',$page_data);
 	}
-	public function blog_details($id)
-	{
-
 	public function blog_list($id)
 	{
 	    $page_data['blog_category']=$this->Main_model->get_blog_category();
@@ -36,7 +32,6 @@ class Blog extends CI_Controller {
 	public function blog_details($id)
 	{
 	    $page_data['blog_category']=$this->Main_model->get_blog_category();
-c
 		 $page_data['blogs']=$this->Main_model->get_blog_list();
 		 $page_data['blog_details'] = $this->db->get_where('blogs', array('id'=>$id))->row_array();
 		 $page_data['blogs_limits']=$this->Main_model->get_blog_limit();
@@ -53,13 +48,6 @@ c
 	}
 	public function search_param(){
       $title = $this->input->post('blog_title');
-      if($title != ''){
-        $this->db->like('blog_title', $title);
-      }
-      $data['search'] =  $this->db->get('blogs')->result_array();
-      print_r($data['search']);die();
-      $this->render_blog('templates/blog/blog',$data);
-      //redirect('home/advance_search/'.$title.'/'.$category);
       $page_data['search_param'] = $this->Main_model->getSearchBlog($title);
       $this->render_blog('templates/blog/blog',$page_data);
     }

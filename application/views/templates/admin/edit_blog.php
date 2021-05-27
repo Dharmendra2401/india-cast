@@ -17,14 +17,10 @@ $title="Update Blog ";
                 <ol class="bg-info text-light breadcrumb mb-4">
                     <li class="breadcrumb-item active"><?php echo $title;  ?></li>
                 </ol>
-<<<<<<< HEAD
                 <a href="<?php echo base_url();?>admin/blog_list" class="btn btn-sm bg-primary text-white float-right">Back</a>
                     
                  
                     <br>
-=======
-
->>>>>>> c40f2341efec47e3db7c4855a36440f3313179c7
                 
                 <!-- <form class="row ">
                      <div class="col-md-12 text-right">

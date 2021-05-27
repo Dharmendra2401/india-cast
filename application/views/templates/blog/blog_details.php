@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 <style type="text/css">
 	.section-banner-wrap{
 		padding: 80px 0!important;
@@ -15,16 +12,11 @@
 					<div class="inner-header-content">
 						<span class="screen-reader-text">Posted on</span>
 						<span class="posted-on">
-<<<<<<< HEAD
-							<a href="http://blog.adnest.in/2019/11/18/" rel="bookmark">
-								<span class="entry-date published"><?php echo $blog_details['date_created']?></span>		
-=======
 							<a rel="bookmark">
 								<span class="entry-date published"><?php  $blog_details['date_created'];
 																			$timestamp = strtotime($blog_details['date_created']);
 																			echo date("Y-M-d", $timestamp);
 																			?>	</span>		
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 							</a>
 						</span>
 						<h1 class="page-title"><?php echo $blog_details['blog_title']?></h1>
@@ -42,21 +34,13 @@
 							<a href="<?php echo base_url().'home';?>" >
 								<span itemprop="name">Home</span>
 							</a><meta itemprop="position" content="1" />
-<<<<<<< HEAD
-						</li>/
-=======
 						</li>
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 						<li itemprop="itemListElement" itemscope itemtype="" class="trail-item">
 							<a href="<?php echo base_url().'blog/index';?>">
 								<span itemprop="name">Blog</span>
 							</a>
 							<meta itemprop="position" content="2" />
-<<<<<<< HEAD
-						</li>/
-=======
 						</li>
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 						<li itemprop="itemListElement" itemscope itemtype="" class="trail-item">
 							<a >
 								<?php echo $blog_details['blog_title']?>
@@ -131,39 +115,21 @@
 									</p>
 									<p class="comment-form-comment">
 										<label for="comment">Comment</label> 
-<<<<<<< HEAD
-										<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required">
-										</textarea>
-									</p>
-									<p class="comment-form-author">
-=======
 										<textarea maxlength="350" minlength="200" class="required" id="desinp" name="comment" cols="45" rows="8" required="required">
 										</textarea>
 									</p>
 									<p class="comment-form-author" style="width: 49.5%!important;">
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 										<label for="author">Name 
 											<span class="required">*</span>
 										</label> 
 										<input id="author" name="name" type="text" value="" size="30" maxlength="245" required='required' />
 									</p>
-<<<<<<< HEAD
-									<p class="comment-form-email">
-=======
 									<p class="comment-form-email" style="width: 49.5%!important;">
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 										<label for="email">Email 
 											<span class="required">*</span>
 										</label> 
 										<input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' />
 									</p>
-<<<<<<< HEAD
-									<p class="comment-form-url">
-										<label for="url">Website</label> 
-										<input id="url" name="website" type="text" value="" size="30" maxlength="200" />
-									</p>
-=======
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 									<p class="form-submit">
 										<input type="submit" id="submit" class="submit"/> 
 										<input type='hidden' name='blog_id' value="<?php echo $blog_details['id']?>" id='comment_parent' value='0' />
@@ -171,17 +137,10 @@
 								</form>
 							</div><!-- #respond -->
 						</div><!-- #comments -->
-<<<<<<< HEAD
-						<nav class="navigation clearfix post-navigation" role="navigation">
-							<h2 class="screen-reader-text">Post navigation</h2>
-							<div class="nav-links"><div class="nav-previous"><a href="#" rel="prev"><span class="nav-label">Previous Reading</span><span class="nav-title">The Indispensable Creative Brief</span></a></div></div>
-						</nav>				
-=======
 						<!--<nav class="navigation clearfix post-navigation" role="navigation">-->
 						<!--	<h2 class="screen-reader-text">Post navigation</h2>-->
 						<!--	<div class="nav-links"><div class="nav-previous"><a href="#" rel="prev"><span class="nav-label">Previous Reading</span><span class="nav-title">The Indispensable Creative Brief</span></a></div></div>-->
 						<!--</nav>				-->
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 					</main>
 				</div>
 			<div class="col-12 col-md-4">
@@ -209,9 +168,6 @@
 						</ul>
 					</div>
 					<div id="recent-comments-2" class="widget widget_recent_comments">
-<<<<<<< HEAD
-						<h2 class="widget-title">Recent Comments</h2><ul id="recentcomments"></ul>
-=======
 						<h2 class="widget-title">Search by Category</h2>
 						<ul>
 							<?php 
@@ -222,19 +178,14 @@
 								</li>
 								<?php } }?>	
 						</ul>
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 					</div>
 					<div id="archives-2" class="widget widget_archive">
 						<h2 class="widget-title">Archives</h2>		
 						<ul>
-<<<<<<< HEAD
-							<li><a href='#'>November 2019</a></li>
-=======
 							<li><a ><?php  $blog_details['date_created'];
 																			$timestamp = strtotime($blog_details['date_created']);
 																			echo date("Y-M-d", $timestamp);
 																			?></a></li>
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 						</ul>
 					</div>	
 				</sidebar>
@@ -246,8 +197,6 @@
 <div class="instagram-wrapper">
 	<div class="container"></div>
 </div>
-<<<<<<< HEAD
-=======
 <script type="text/javascript">
 var wrapper = document.createElement('div');
 var text    = document.getElementById("desinp");
@@ -275,5 +224,4 @@ function _set() {
 text.addEventListener('input', _set);
 _set.call(text);
 </script>
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 	

@@ -88,12 +88,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
      <ul class="nav navbar-nav">
+		 <!-- <li><a href="<?php echo base_url().'home/about';?>">ABOUT US</a></li> -->
         <li><a href="#">Casting Calls  </a></li>
-<<<<<<< HEAD
-        <li><a href="<?php echo base_url()?>home/category">Categories  </a></li>
-=======
         <li><a href="#">Categories  </a></li>
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
         <li><a href="<?php echo base_url().'blog/index';?>">Blogs </a></li>
         <li><a href="#">Tie-Ups </a></li>
         <li><a href="#">Hire Talent </a></li>

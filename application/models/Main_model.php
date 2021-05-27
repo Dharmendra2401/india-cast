@@ -333,8 +333,6 @@ Class Main_model extends CI_Model {
 			      return 0;
 			     }
 	      }
-<<<<<<< HEAD
-=======
 	      function get_blog_list_by_category($id)
 	      {
 	        $this->db->select('*');
@@ -348,7 +346,6 @@ Class Main_model extends CI_Model {
 			      return 0;
 			     }
 	      }
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 	      function get_blog_limit()
 	      {
 	        $this->db->select('*');
@@ -362,8 +359,6 @@ Class Main_model extends CI_Model {
 			      return 0;
 			     }
 	      }
-<<<<<<< HEAD
-=======
 	      function get_blog_category()
 	      {
 	        $this->db->select('*');
@@ -375,7 +370,6 @@ Class Main_model extends CI_Model {
 			      return 0;
 			     }
 	      }
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 	      function get_blog_sliders()
 	      {
 	        $this->db->select('*');
@@ -395,9 +389,6 @@ Class Main_model extends CI_Model {
 	       return $this->db->insert_id();
 		}
 		
-<<<<<<< HEAD
-
-=======
 		function getSearchBlog($searchBlog) {
 		    if(empty($searchBlog))
 		       return array();
@@ -407,5 +398,4 @@ Class Main_model extends CI_Model {
 
 		    return $result->result_array();
 		} 
->>>>>>> 5d690770a61074b157ce0ba386e69feb9a9b4a0c
 }

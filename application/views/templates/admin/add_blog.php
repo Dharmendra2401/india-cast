@@ -17,14 +17,10 @@ $title="Add New Blog ";
                 <ol class="bg-info text-light breadcrumb mb-4">
                     <li class="breadcrumb-item active"><?php echo $title;  ?></li>
                 </ol>
-<<<<<<< HEAD
                 <a href="<?php echo base_url();?>admin/blog_list" class="btn btn-sm bg-primary text-white float-right">Back</a>
                     
                  
                     <br>
-=======
-
->>>>>>> c40f2341efec47e3db7c4855a36440f3313179c7
                 
                 <!-- <form class="row ">
                      <div class="col-md-12 text-right">
@@ -38,11 +34,7 @@ $title="Add New Blog ";
                    <div class="col-md-4 form-group">
                    <div class="row">
                      <label  class="col-md-4"><strong> Title:</strong></label>
-<<<<<<< HEAD
                      <input type="text"  placeholder="Enter title" id="title" name="blog_title" class="form-control" required>
-=======
-                     <input type="text"  placeholder="Enter title" id="title" name="blog_title" class="form-control">
->>>>>>> c40f2341efec47e3db7c4855a36440f3313179c7
                    </div>
                    </div>
                    <div class="col-md-1 form-group"></div>
@@ -64,33 +56,21 @@ $title="Add New Blog ";
                   <div class="col-md-4 form-group">
                     <div class="row">
                       <label class="col-md-12"><strong> Image:</strong> <small style="color:red;">(Image size :1200 X 710)</small></label>
-<<<<<<< HEAD
                       <input type="file" class="form-control" required name="blog_images"><br>
-=======
-                      <input type="file" class="form-control" name="blog_images"><br>
->>>>>>> c40f2341efec47e3db7c4855a36440f3313179c7
                     </div>
                   </div>
                   <div class="col-md-1 form-group"></div>
                   <div class="col-md-4 form-group">
                     <div class="row">
                       <label class="col-md-12"><strong> Short Desc:</strong></label>
-<<<<<<< HEAD
                       <textarea placeholder="Enter desc" required name="short_desc" class="form-control" rows="3"></textarea>
-=======
-                      <textarea placeholder="Enter desc" name="short_desc" class="form-control" rows="3"></textarea>
->>>>>>> c40f2341efec47e3db7c4855a36440f3313179c7
                     </div>
                   </div>
                   <div class="col-md-1 form-group"></div>
                   <div class="col-md-6 form-group">
                     <div class="row">
                       <label class="col-md-12"><strong> Description:</strong><small style="color:red;"> (min 200 words to 350 word max)</small></label>
-<<<<<<< HEAD
                       <textarea placeholder="Enter desc" required name="description" class="form-control" rows="5"></textarea>
-=======
-                      <textarea placeholder="Enter desc" name="description" class="form-control" rows="5"></textarea>
->>>>>>> c40f2341efec47e3db7c4855a36440f3313179c7
                     </div>
                   </div>
                 </div>
