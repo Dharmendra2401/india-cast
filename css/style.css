@@ -3878,3 +3878,980 @@ label > input[type="radio"] {
   .radio-label{color:#6D6D6D;width:100%;}
   .margin-radio span{opacity: 0.5;}
   .grey{color: #999;}
+  /*--------------------------About Us Page CSS----------------------------*/
+@media (min-width: 1281px) {
+  
+  .welcome_heading{
+		    font-size: 20px;
+		    color: #6D6D6D;
+		    opacity: 100%;
+		    font-family: 'Roboto';
+		    text-align: center;
+
+	}
+	.mrgn-img{
+		margin-left: 10%;
+	}
+	.text-style{
+		width: 412px;
+    	height: 76px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		color: #6D6D6D;
+	}
+	.cast-india-heading{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+
+	}
+	.sub-heading{
+		font-size: 14px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Open Sans';
+	}
+	.text-style-section-cast-india-one{
+		width: 860px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.section-padding {
+    padding-top: 30px!important;
+    padding-bottom: 30px!important;
+}
+.section-style{
+	top: 840px;
+	left: -1px;
+	width: 1367px;
+	height: 331px;
+	background: rgb(51, 49, 50, 0.2);
+}
+.mission{
+	font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    font-family: 'Roboto';
+
+
+}
+.vission{
+	font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    font-family: 'Roboto';
+}
+.container-width {
+    width: 1349px!important;
+}
+.mission-img-style{
+	padding-left: 10%;
+	height: 171px;
+	top: 906px;
+
+}
+.vission-img-style{
+	padding-left: 10%;
+	height: 171px;
+	top: 906px;
+}
+.text-style-mission{
+		width: 327px;
+    	height: 38px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.heading-aspirant{
+		font-size: 14px;
+	    color: #6D6D6D;
+	    opacity: 50%;
+	    text-align: center;
+	    font-family: 'Open Sans';
+	    text-align: center;
+	    margin-bottom: 5%;
+	    margin-top: 5%;
+
+	}
+	.aspirant-text{
+		width: 455px;
+		height: 179px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.cast-india-heading-aspirant{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	    margin-left: 40%;
+	}
+	.employer-text{
+		width: 452px;
+		height: 95px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.cast-india-heading-employer{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	    margin-left: 100%;
+	}
+	.merchant-text{
+		width: 791px;
+		height: 38px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+		
+	}
+	.margin-style-merchant{
+		margin-top: 5%;
+	}
+	.merchant-text1{
+		width: 516px;
+		height: 95px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.card-view{
+		width: 459px;
+		height: 306px;
+	}
+	.cast-india-img-heading-employer{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	    margin-left: 30%;
+	}
+	.career-op-heading{
+		width: 168px;
+		height: 22px;
+		font-size: 18px;
+		opacity: 100%;
+		font-family: 'Roboto';
+		color: #6D6D6D;
+		margin-left: 30%;
+		text-align: center;
+	}
+	.btn-mrgn-left{
+		margin-left: 30%;
+	}
+	.card {
+  		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  		transition: 0.3s;
+ 		padding-top: 7%;
+    	padding-bottom: 7%;
+	}
+	.career-op-text{
+		width: 312px;
+		height: 38px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		text-align: center;
+		color: #6D6D6D;
+		margin-left: 13%;
+	}
+	.join-team{
+		width:102px;
+		height:19px;
+		font-family: 'Roboto';
+		font-size: 16px;
+		text-align: center;
+		opacity: 100%;
+		color: #FFFFFF;
+		text-align: center;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .welcome_heading{
+		    font-size: 20px;
+		    color: #6D6D6D;
+		    opacity: 100%;
+		    font-family: 'Roboto';
+		    text-align: center;
+
+	}
+	.mrgn-img{
+		margin-left: 10%;
+	}
+	.text-style{
+		width: 412px;
+    	height: 76px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		color: #6D6D6D;
+	}
+	.cast-india-heading{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+
+	}
+	.sub-heading{
+		font-size: 14px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Open Sans';
+	}
+	.text-style-section-cast-india-one{
+		width: 860px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.section-padding {
+	    padding-top: 30px!important;
+	    padding-bottom: 30px!important;
+	}
+	.section-style{
+		top: 840px;
+		left: -1px;
+		width: 1367px;
+		height: 331px;
+		background: rgb(51, 49, 50, 0.2);
+	}
+	.mission{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    font-family: 'Roboto';
+	}
+	.vission{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    font-family: 'Roboto';
+	}
+	.container-width {
+	    width: 1349px!important;
+	}
+	.mission-img-style{
+		padding-left: 10%;
+		height: 171px;
+		top: 906px;
+
+	}
+	.vission-img-style{
+		padding-left: 10%;
+		height: 171px;
+		top: 906px;
+	}
+	.text-style-mission{
+		width: 327px;
+    	height: 38px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.heading-aspirant{
+		font-size: 14px;
+	    color: #6D6D6D;
+	    opacity: 50%;
+	    text-align: center;
+	    font-family: 'Open Sans';
+	    text-align: center;
+	    margin-bottom: 5%;
+	    margin-top: 5%;
+
+	}
+	.aspirant-text{
+		width: 455px;
+		height: 179px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.cast-india-heading-aspirant{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	    margin-left: 40%;
+	}
+	.employer-text{
+		width: 452px;
+		height: 95px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.cast-india-heading-employer{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	    margin-left: 100%;
+	}
+	.merchant-text{
+		width: 791px;
+		height: 38px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+		
+	}
+	.margin-style-merchant{
+		margin-top: 5%;
+	}
+	.merchant-text1{
+		width: 516px;
+		height: 95px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.card-view{
+		width: 459px;
+		height: 306px;
+	}
+	.cast-india-img-heading-employer{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	    margin-left: 30%;
+	}
+	.career-op-heading{
+		width: 168px;
+		height: 22px;
+		font-size: 18px;
+		opacity: 100%;
+		font-family: 'Roboto';
+		color: #6D6D6D;
+		margin-left: 30%;
+		text-align: center;
+	}
+	.btn-mrgn-left{
+		margin-left: 30%;
+	}
+	.card {
+  		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  		transition: 0.3s;
+ 		padding-top: 7%;
+    	padding-bottom: 7%;
+	}
+	.career-op-text{
+		width: 312px;
+		height: 38px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		text-align: center;
+		color: #6D6D6D;
+		margin-left: 13%;
+	}
+	.join-team{
+		width:102px;
+		height:19px;
+		font-family: 'Roboto';
+		font-size: 16px;
+		text-align: center;
+		opacity: 100%;
+		color: #FFFFFF;
+		text-align: center;
+	}
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  .welcome_heading{
+		    font-size: 20px;
+		    color: #6D6D6D;
+		    opacity: 100%;
+		    font-family: 'Roboto';
+		    text-align: center;
+
+	}
+	.mrgn-img{
+		margin-left: 10%;
+	}
+	.text-style{
+		width: 412px;
+    	height: 76px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		color: #6D6D6D;
+	}
+	.cast-india-heading{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+
+	}
+	.sub-heading{
+		font-size: 14px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Open Sans';
+	}
+	.text-style-section-cast-india-one{
+		width: 860px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.section-padding {
+    padding-top: 30px!important;
+    padding-bottom: 30px!important;
+}
+.section-style{
+	top: 840px;
+	left: -1px;
+	width: 1367px;
+	height: 331px;
+	background: rgb(51, 49, 50, 0.2);
+}
+.mission{
+	font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    font-family: 'Roboto';
+
+
+}
+.vission{
+	font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    font-family: 'Roboto';
+}
+.container-width {
+    width: 1349px!important;
+}
+.mission-img-style{
+	padding-left: 10%;
+	height: 171px;
+	top: 906px;
+
+}
+.vission-img-style{
+	padding-left: 10%;
+	height: 171px;
+	top: 906px;
+}
+.text-style-mission{
+		width: 327px;
+    	height: 38px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.heading-aspirant{
+		font-size: 14px;
+	    color: #6D6D6D;
+	    opacity: 50%;
+	    text-align: center;
+	    font-family: 'Open Sans';
+	    text-align: center;
+	    margin-bottom: 5%;
+	    margin-top: 5%;
+
+	}
+	.aspirant-text{
+		width: 455px;
+		height: 179px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.cast-india-heading-aspirant{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	    margin-left: 40%;
+	}
+	.employer-text{
+		width: 452px;
+		height: 95px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.cast-india-heading-employer{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	    margin-left: 100%;
+	}
+	.merchant-text{
+		width: 791px;
+		height: 38px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+		
+	}
+	.margin-style-merchant{
+		margin-top: 5%;
+	}
+	.merchant-text1{
+		width: 516px;
+		height: 95px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.card-view{
+		width: 459px;
+		height: 306px;
+		color: #FFFFFF;
+		opacity: 100%;
+		box-shadow: #00000029;
+	}
+	.cast-india-img-heading-employer{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	    margin-left: 25%;
+	}
+	.career-op-heading{
+		width: 168px;
+		height: 22px;
+		font-size: 18px;
+		opacity: 100%;
+		font-family: 'Roboto';
+		color: #6D6D6D;
+		margin-left: 25%;
+		text-align: center;
+	}
+	.career-op-text{
+		width: 312px;
+		height: 38px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		text-align: center;
+		    color: #6D6D6D;
+	}
+	.join-team{
+		width:102px;
+		height:19px;
+		font-family: 'Roboto';
+		font-size: 16px;
+		text-align: center;
+		opacity: 100%;
+		color: #FFFFFF;
+		text-align: center;
+	}
+  
+}
+
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .welcome_heading{
+		    font-size: 20px;
+		    color: #6D6D6D;
+		    opacity: 100%;
+		    font-family: 'Roboto';
+		    text-align: center;
+
+	}
+	.text-style{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		color: #6D6D6D;
+	}
+	.cast-india-heading{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+
+	}
+	.sub-heading{
+		font-size: 14px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Open Sans';
+	}
+	.text-style-section-cast-india-one{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.section-padding {
+    padding-top: 30px!important;
+    padding-bottom: 30px!important;
+}
+.section-style{
+	left: -1px;
+	background: rgb(51, 49, 50, 0.2);
+}
+.mission{
+	font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    font-family: 'Roboto';
+
+
+}
+.vission{
+	font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    font-family: 'Roboto';
+}
+.text-style-mission{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.heading-aspirant{
+		font-size: 14px;
+	    color: #6D6D6D;
+	    opacity: 50%;
+	    text-align: center;
+	    font-family: 'Open Sans';
+	    text-align: center;
+
+	}
+	.aspirant-text{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.cast-india-heading-aspirant{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	}
+	.employer-text{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.cast-india-heading-employer{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	}
+	.merchant-text{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+		
+	}
+	
+	.merchant-text1{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		color: #6D6D6D;
+	}
+	.card-view{
+		color: #FFFFFF;
+		opacity: 100%;
+		box-shadow: #00000029;
+	}
+	.img-all-mobile-mrgn{
+	    margin-left: 25%;
+	}
+	.cast-india-img-heading-employer{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	    margin-left: 25%;
+	}
+	.img-1840{
+	    margin-left: 18%;
+	}
+	.career-op-heading{
+		width: 168px;
+		height: 22px;
+		font-size: 18px;
+		opacity: 100%;
+		font-family: 'Roboto';
+		color: #6D6D6D;
+		margin-left: 25%;
+		text-align: center;
+	}
+	.btn-mrgn-left{
+		margin-left: 25%;
+		width: 137px!important;
+	}
+	.card {
+  		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  		transition: 0.3s;
+ 		padding-top: 7%;
+    	padding-bottom: 7%;
+	}
+	.career-op-text{
+		width: 312px;
+		height: 38px;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		text-align: center;
+		color: #6D6D6D;
+		margin-left: 5%;
+	}
+	.join-team{
+		font-family: 'Roboto';
+		font-size: 10px;
+		text-align: center;
+		opacity: 100%;
+		color: #FFFFFF;
+		text-align: center;
+	}
+  
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 720px) {
+
+	 .welcome_heading{
+		    font-size: 20px;
+		    color: #6D6D6D;
+		    opacity: 100%;
+		    font-family: 'Roboto';
+		    text-align: center;
+
+	}
+	.text-style{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		color: #6D6D6D;
+	}
+	.cast-india-heading{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+
+	}
+	.sub-heading{
+		font-size: 14px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Open Sans';
+	}
+	.text-style-section-cast-india-one{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.section-padding {
+    padding-top: 30px!important;
+    padding-bottom: 30px!important;
+}
+.section-style{
+	left: -1px;
+	background: rgb(51, 49, 50, 0.2);
+}
+.mission{
+	font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    font-family: 'Roboto';
+
+
+}
+.vission{
+	font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    font-family: 'Roboto';
+}
+
+
+
+.text-style-mission{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.heading-aspirant{
+		font-size: 14px;
+	    color: #6D6D6D;
+	    opacity: 50%;
+	    text-align: center;
+	    font-family: 'Open Sans';
+	    text-align: center;
+
+	}
+	.aspirant-text{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.cast-india-heading-aspirant{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	}
+	.employer-text{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+	}
+	.cast-india-heading-employer{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	}
+	.merchant-text{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		    color: #6D6D6D;
+		
+	}
+	
+	.merchant-text1{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		color: #6D6D6D;
+	}
+	.card-view{
+		color: #FFFFFF;
+		opacity: 100%;
+		box-shadow: #00000029;
+	}
+	.cast-india-img-heading-employer{
+		font-size: 20px;
+	    color: #6D6D6D;
+	    opacity: 100%;
+	    text-align: center;
+	    font-family: 'Roboto';
+	}
+	.career-op-heading{
+		font-size: 18px;
+		opacity: 100%;
+		font-family: 'Roboto';
+		color: #6D6D6D;
+		text-align: center;
+	}
+	.btn-mrgn-left{
+		margin-left: 30%;
+		width: 137px!important;
+	}
+	.career-op-text{
+		font-family: 'Open Sans';
+		font-size: 14px;
+		opacity: 50%;
+		text-align: center;
+		    color: #6D6D6D;
+	}
+	.join-team{
+		font-family: 'Roboto';
+		font-size: 10px!important;
+		text-align: center;
+		opacity: 100%;
+		color: #FFFFFF;
+		text-align: center;
+	}
+}

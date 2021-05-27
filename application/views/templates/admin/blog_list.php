@@ -2,7 +2,7 @@
 <html lang="en">
 <?php  
 include "top_head.php"; 
-$title="Blogs List ";
+$title="Blog";
 ?>
 
 <div id="layoutSidenav">
@@ -18,8 +18,8 @@ $title="Blogs List ";
                 
                 <form class="row ">
                      <div class="col-md-12 text-right">
-                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add">Add
-                            <?php echo $title;  ?></button><br><br> -->
+                        <a href="<?php echo base_url();?>admin/add_blog" class="btn btn-primary">Add New
+                            <?php echo $title;  ?></a><br><br>
                     </div> 
 
                 </form>
@@ -151,6 +151,7 @@ function verify(id,status,table,classname){
 } 
 });	
     
+
   } 
 });
 	

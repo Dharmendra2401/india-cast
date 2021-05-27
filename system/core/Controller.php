@@ -99,5 +99,10 @@ class CI_Controller {
 	{
 		return self::$instance;
 	}
-
+	public function render_blog($page_name,$data=false)
+	{
+     	$this->load->view('templates/blog/include/header', $data);
+     	$this->load->view($page_name, $data);
+     	$this->load->view('templates/blog/include/footer', $data);
+	}
 }
