@@ -673,6 +673,7 @@ public function forgotpass()
 
 	    
 
+<<<<<<< HEAD
 
 	}
 	public function save_blog(){
@@ -707,12 +708,50 @@ public function forgotpass()
                     /*print_r($error); exit();*/
                 }
 
+=======
+
+	}
+	public function save_blog(){
+				$this->Admin_model->authtrue();
+				 $config['upload_path'] = 'images/blog';
+                $config['allowed_types'] = 'gif|jpeg|jpg|png';
+                $config['max_size'] = '2048000';
+                $this->load->library('upload', $config);
+                if($this->upload->do_upload('blog_images')){
+                    $file = $this->upload->data();
+                    $data['blog_images'] = $file['file_name'];
+                
+                    $source_path =  'images/' . $filename;
+	    			$target_path =  'images/blog/thumb_'.$filename;
+
+				    $config_manip = array(
+
+				        'image_library' => 'gd2',
+				        'source_image' => $source_path,
+				        'new_image' => $target_path,
+				        'maintain_ratio' => TRUE,
+				        'width' => 1200,
+				        'height' => 710
+				    );
+				    $this->image_lib->initialize($config_manip);
+				    $this->load->library('image_lib', $config_manip);
+                }
+                else{
+                    $error = array('error' => $this->upload->display_errors());
+                    /*print_r($error); exit();*/
+                }
+
+>>>>>>> c40f2341efec47e3db7c4855a36440f3313179c7
                 $data['blog_title'] = $this->input->post('blog_title');
                 $data['description'] = $this->input->post('description');
                 $data['short_desc'] = $this->input->post('short_desc');
                 $data['blog_category_id'] = $this->input->post('blog_category_id');
                 
+<<<<<<< HEAD
                 $page_data['save_blog'] = $this->Admin_model->save_blog($data);
+=======
+                $page_data['save_blog'] = $this->Backend_Model->save_blog($data);
+>>>>>>> c40f2341efec47e3db7c4855a36440f3313179c7
                 redirect('admin/blog_list', $page_data);
 	}
 	function blog_list(){

@@ -20,7 +20,7 @@ Class Admin_model extends CI_Model {
 	
 
 		public function __construct() {
-		  parent::__construct(); 
+		  parent::__construct();   
 		}
 
 		public function notifications($id,$table,$getricid,$getuser){
@@ -964,7 +964,7 @@ Class Admin_model extends CI_Model {
 			 
 
 			
-			
+
 
 			
 
