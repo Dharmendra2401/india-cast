@@ -1,4 +1,15 @@
 
+<style type="text/css">
+#panel {
+  display: none;
+}
+#panel1 {
+  display: none;
+}
+.cur{
+      cursor: pointer;
+  }
+</style>
 <!-- Life At Cast India -->
 <?php $this->load->view('/common/header'); ?>
 <!--Testimonials-->
@@ -127,10 +138,9 @@
 		          			
 						</div>
           			</div>
-          			<img class="img-responsive mrgn-img img-founder our-team-arrow-style" src="<?php echo base_url()?>images/arrowheads.svg">
+          			<img class="img-responsive mrgn-img img-founder our-team-arrow-style cur" onclick="myFunction()" src="<?php echo base_url()?>images/arrowheads.svg">
           			
-				</div>
-				<div class="tab-pane active" id="1">
+          			<div id="panel">
 					<p class="our-team">The Root</p>
 					<div class="row row-image-team">
 						<div class="col-sm-6 col-md-12 col-lg-12 col-xl-12">
@@ -177,13 +187,15 @@
 		          			
 						</div>
           			</div>
-          			<img class="img-responsive mrgn-img img-founder our-team-arrow-style" src="<?php echo base_url()?>images/arrowheads.svg">
-          			<div style="margin-bottom: 5%;">
+          			<img class="img-responsive mrgn-img img-founder our-team-arrow-style cur" onclick="myFunction1()" src="<?php echo base_url()?>images/arrowheads.svg">
+          			<div style="margin-bottom: 5%;" id="panel1">
           				<p class="our-team" style="color: black!important;font-size: 20px;margin-left: 37%;">Carve your Future with Cast India</p>
-          			<p class=" our-team-desc" style="opacity: 50%;font-size: 13px;margin-left: 32%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          			<a href="<?php echo base_url()?>home/career" class="our-team-desc" ><u style="color: red!important;font-size: 20px;margin-left: 41%;margin-bottom: 30px;">Vacancies</u></a>
+          				<p class=" our-team-desc" style="opacity: 50%;font-size: 13px;margin-left: 32%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          				<a href="<?php echo base_url()?>home/career" class="our-team-desc" ><u style="color: red!important;font-size: 20px;margin-left: 41%;margin-bottom: 30px;">Vacancies</u></a>
           			</div>
 				</div>
+				</div>
+				
 				<div class="tab-pane" id="2">
           			<p class="our-team">Our Team</p>
 				</div>
@@ -199,3 +211,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <?php $this->load->view('/common/footer'); ?>
+<script>
+function myFunction() {
+  document.getElementById("panel").style.display = "block";
+}
+function myFunction1() {
+  document.getElementById("panel1").style.display = "block";
+}
+</script>

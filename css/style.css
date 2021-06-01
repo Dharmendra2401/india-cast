@@ -906,8 +906,8 @@ border-radius: 30px;
 
 .contact {
 background: rgb(0 0 0);
-border-top: 3px solid #d9d9d9;
-/* margin: 20px 0 0 0; */
+/*border-top: 3px solid #d9d9d9;
+*//* margin: 20px 0 0 0; */
 }
 .contact-grid h2 {
 margin: 0;
@@ -4850,6 +4850,16 @@ label > input[type="radio"] {
 .border-bottom{
 	border-bottom: 4px solid black;
 	border-color: red;
+	padding: 0px 17px 0px 17px;
+}
+.border-bottom-dot-line{
+	border:none;
+	  border-top:1px dotted red;
+	  color:#fff;
+	  height:0px;
+	  width: 100%;
+    opacity: 21%;
+    margin-top: 3px;
 }
 .ccd-font{
 	opacity: 100%;
@@ -5019,4 +5029,592 @@ margin-left: 10%;
     margin-left: 49%;
     margin-top: 30px;
     margin-bottom: 48px;
+}
+.cat-img-banner{
+	height: 224px;
+	margin-left: 0px!important;
+	background: url("../images/category-banner.svg");
+}
+.cat-img-properties{
+	margin-left: -36px;
+    padding-right: 0px;
+    margin-right: 1px;
+}
+.cat-img-1{
+    width: 190px;
+    height: 155px;
+}
+.cat-img-2{
+	height: 197px;
+    width: 189px;
+    margin-bottom: 25px;
+}
+.cat-img-3{
+	margin-top: 0px;
+    width: 190px;
+    height: 103px;
+}
+.cat-img-4{
+	width: 190px;
+    height: 161px;
+}
+.cat-img-6{
+	height: 203px;
+    width: 210px;
+}
+.cat-img-7{
+	height: 112px;
+    padding-left: 20px;
+    /* margin-bottom: -22px; */
+    width: 210px;
+}
+.cat-img-8{
+	margin-top: -67px;
+    width: 190px;
+    height: 97px;
+}
+.cat-img-9{
+	margin-top: -26px;
+    height: 56px;
+    width: 190px;
+}
+.cat-img-10{
+	margin-top: -120px;
+    width: 190px;
+    height: 150px;
+    margin-left: 20px;
+}
+.cat-img-11{
+	    margin-top: -96px;
+    width: 190px;
+    height: 126px;
+}
+.cat-img-12{
+	margin-left: 1px;
+    margin-top: -125px;
+    width: 210px;
+    height: 155px;
+}
+.cat-img-13{
+	idth: 225px;
+    height: 49px;
+    /* width: 211px; */
+    margin-top: -19px;
+}
+.cat-img-14{
+	margin-top: -110px;
+    margin-left: 41px;
+    height: 140px;
+    width: 190px;
+}
+.cat-heading{
+	text-align: center;
+	color: #6D6D6D!important;font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-22)/var(--unnamed-line-spacing-27) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-6d6d6d);
+font: normal normal bold 22px/27px Roboto;
+letter-spacing: 0px;
+color: #6D6D6D;
+text-transform: uppercase;
+opacity: 1;
+font-size: 22px;
+    padding-top: 23px;
+}
+
+.adver-img{
+	top: 1033px;
+width: 207px;
+height: 207px;
+border-radius: 5px;
+opacity: 1;
+}
+.join-cast-india-font{
+	font-size: 25px!important;
+	margin-bottom: 32px;
+    margin-top: 72px;
+}
+.join-cast-india-p{
+top: 4261px;
+left: 295px;
+width: 242px;
+height: 38px;
+font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-19) var(--unnamed-font-family-open-sans);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-6d6d6d);
+text-align: center;
+font: normal normal normal 14px/19px Open Sans;
+letter-spacing: 0px;
+color: #6D6D6D;
+opacity: 0.5;
+margin-left: -40px;
+}
+/*sub category css*/
+.sub-cat-heading{
+	top: 520px;
+left: 139px;
+width: 228px;
+height: 24px;
+text-align: left;
+font: normal normal medium 18px/24px Roboto;
+letter-spacing: 0px;
+color: #6D6D6D;
+text-transform: uppercase;
+opacity: 1;
+}
+/*profile css */
+.profile-img-banner{
+	height: 250px;
+	margin-left: 0px!important;
+	background: url("../images/makeup-artist@2x.png");
+	width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.profile-img-banner2{
+	height: 250px;
+	margin-left: 0px!important;
+	background: url("../images/opportunity-2x.png");
+	width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.profile-img-banner3{
+	height: 250px;
+	margin-left: 0px!important;
+	background: url("../images/banner-stage-2x.png");
+	width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.profile-nav-tab-menu{
+	margin: 71px -89px 0px -90px!important;
+	    background: black;
+    opacity: 67%;
+}
+.sub-cat-bottom-banner{
+	height: 250px;
+	margin-left: 0px!important;
+	background: url("../images/sub-cat-ba.png");
+	width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 42px;
+    margin-bottom: -94px;
+}
+.prev-img{
+background: transparent url('../images/Group-735.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.next-img{
+	float:right;
+background: transparent url('../images/Ellipse-130.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.glyphicon-chevron-left:before {
+    display: none!important;
+}
+.glyphicon-chevron-right:before {
+    display: none!important;
+}
+.carousel-control.left {
+    background-image: none!important;
+    background-image: none!important;
+    background-image:none!important;
+    background-image: linear-gradient(to right,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
+}
+.carousel-control.right {
+    background-image: none!important;
+    background-image: none!important;
+    background-image:none!important;
+    background-image: linear-gradient(to right,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
+}
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+     z-index: 0!important; 
+     width: 0%!important; 
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+}
+.centered {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.width-height-cat-advert{
+	width: 234px;height: 204px;
+}
+
+	/* nav pill css */
+.tabs{
+    width:100%;
+    height:auto;
+    margin:0 auto;
+}
+
+/* tab list item */
+.tabs .tabs-list{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+.tabs .tabs-list li{
+    width:auto;
+    float:left;
+    margin:0px;
+    margin-right:2px;
+    padding:5px 16px;
+    text-align: center;
+    background-color:#FFFFFF;
+    background: transparent url('img/Rectangle 1134.png') 0% 0% no-repeat padding-box;
+	box-shadow: 0px 0px 10px #00000029;
+	border-radius: 5px;
+	opacity: 1;
+	margin-left: 13px;
+	margin-top: 13px;
+}
+.tabs .tabs-list li:hover{
+    cursor:pointer;
+}
+.tabs .tabs-list li a{
+    text-decoration: none;
+    color:#6D6D6D;;
+}
+
+/* Tab content section */
+.tabs .tab{
+    display:none;
+    width:96%;
+    min-height:250px;
+    height:auto;
+    border-radius:3px;
+    padding:20px 15px;
+    /*background-color:lavender;*/
+    color:darkslategray;
+    clear:both;
+}
+.tabs .tab h3{
+    border-bottom:3px solid cornflowerblue;
+    letter-spacing:1px;
+    font-weight:normal;
+    padding:5px;
+}
+.tabs .tab p{
+    line-height:20px;
+    letter-spacing: 1px;
+}
+
+/* When active state */
+.active{
+    display:block !important;
+}
+.tabs .tabs-list li.active{
+    background-color:#D81F26 !important;
+    color:black !important;
+}
+.active a{
+    color:#FFFFFF !important;
+}
+
+/* media query */
+@media screen and (max-width:360px){
+    .tabs{
+        margin:0;
+        width:96%;
+    }
+    .tabs .tabs-list li{
+        width:80px;
+    }
+}
+.action-li{
+	top: 497px;
+    left: 218px;
+    height: 29px;
+}
+/* Carousel Fixed Height 
+Limit height on a carousel using inline background style 
+*/
+.slider-size {
+  height: 200px; 
+}
+.slider-img{
+	 background: transparent url(../images/Rectangle.png) 0% 0% no-repeat padding-box;
+	 top: 610px;
+left: 139px;
+width: 1161px;
+height: auto;
+padding-top: 0px;
+}
+.slider-img1{
+	 background: transparent url(../images/Rectangle.png) 0% 0% no-repeat padding-box;
+	 top: 610px;
+left: 139px;
+width: 1161px;
+height: auto;
+}
+.join-cast-india-img1{
+	
+width: 135px;
+height: 134px;
+background: transparent url(../images/Ellipse8.png) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.join-cast-india-img2{
+	
+width: 135px;
+height: 134px;
+background: transparent url(../images/Ellipse9.png) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.join-cast-india-img3{
+	
+width: 135px;
+height: 134px;
+background: transparent url(../images/Ellipse10.png) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.join-cast-india-img-prop{
+	top: 4145px;
+left: 378px;
+width: 44px;
+height: 49px;
+opacity: 1;
+    margin: 57px 12px 8px 38px;
+}
+.join-cast-india-heading{
+top: 4261px;
+left: 295px;
+width: 242px;
+height: 38px;
+color: var(--unnamed-color-6d6d6d);
+text-align: center;
+letter-spacing: 0px;
+color: #6D6D6D;
+margin-left: -52px;
+font-size: 20px;
+    font-weight: 200;
+    margin-top: 26px;
+}
+.join-cast-india-img1{
+	
+width: 90px;
+height: 134px;
+background: transparent url(../images/Ellipse8.png) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.join-cast-india-img2{
+	
+width: 90px;
+height: 134px;
+background: transparent url(../images/Ellipse9.png) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.join-cast-india-img3{
+	
+width: 90px;
+height: 134px;
+background: transparent url(../images/Ellipse10.png) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.join-cast-india-img-prop{
+	top: 4145px;
+left: 378px;
+width: 44px;
+height: 49px;
+opacity: 1;
+    margin: 57px 12px 8px 38px;
+}
+.sub-cat-banner1{
+	top: 739px;
+left: 173px;
+width: 1020px;
+height: 243px;
+background: transparent url(../images/makeup-artist.png) 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1.4;
+margin-left: 30px;
+}
+.sub-cat-banner2{
+	top: 739px;
+left: 173px;
+width: 1020px;
+height: 243px;
+background: transparent url(../images/hairstylist.png) 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1.4;
+margin-left: 30px;
+}
+.sub-cat-banner3{
+	top: 739px;
+left: 173px;
+width: 1020px;
+height: 243px;
+background: transparent url(../images/costume-designer.png) 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1.4;
+margin-left: 30px;
+}
+.sub-cat-banner4{
+	top: 739px;
+left: 173px;
+width: 1020px;
+height: 243px;
+background: transparent url(../images/laundry.png) 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1.4;
+margin-left: 30px;
+}
+.sub-cat-banner5{
+	top: 739px;
+left: 173px;
+width: 1020px;
+height: 243px;
+background: transparent url(../images/tailor.png) 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1.4;
+margin-left: 30px;
+}
+.sub-cat-banner-heading{
+	top: 775px;
+left: 238px;
+width: 126px;
+height: 26px;
+text-align: left;
+font-size:20px Roboto;
+letter-spacing: 0px;
+color: #FFFFFF;
+text-transform: capitalize;
+opacity: 1;
+}
+.sub-cat-banner-heading-bckground{
+	top: 1841px;
+left: 218px;
+width: 90px;
+height: 40px;
+background: transparent url(../images/Rectangle 1160.png) 0% 0% no-repeat padding-box;
+border-radius: 6px;
+opacity: 1;
+padding-top: 25px;
+    margin-left: 58px;
+}
+
+/*profile*/
+.join-cast-india-img1{
+	
+width: 90px;
+height: 134px;
+background: transparent url(../images/Ellipse8.png) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.join-cast-india-img2{
+	
+width: 90px;
+height: 134px;
+background: transparent url(../images/Ellipse9.png) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.join-cast-india-img3{
+	
+width: 90px;
+height: 134px;
+background: transparent url(../images/Ellipse10.png) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.join-cast-india-img-prop{
+	top: 4145px;
+left: 378px;
+width: 44px;
+height: 49px;
+opacity: 1;
+    margin: 57px 12px 8px 38px;
+}
+.sub-cat-banner1{
+	top: 739px;
+left: 173px;
+width: 1020px;
+height: 243px;
+background: transparent url(../images/makeup-artist.png) 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1.4;
+margin-left: 30px;
+}
+.sub-cat-banner2{
+	top: 739px;
+left: 173px;
+width: 1020px;
+height: 243px;
+background: transparent url(../images/hairstylist.png) 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1.4;
+margin-left: 30px;
+}
+.sub-cat-banner3{
+	top: 739px;
+left: 173px;
+width: 1020px;
+height: 243px;
+background: transparent url(../images/costume-designer.png) 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1.4;
+margin-left: 30px;
+}
+.sub-cat-banner4{
+	top: 739px;
+left: 173px;
+width: 1020px;
+height: 243px;
+background: transparent url(../images/laundry.png) 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1.4;
+margin-left: 30px;
+}
+.sub-cat-banner5{
+	top: 739px;
+left: 173px;
+width: 1020px;
+height: 243px;
+background: transparent url(../images/tailor.png) 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1.4;
+margin-left: 30px;
+}
+.sub-cat-banner-heading{
+	top: 775px;
+left: 238px;
+width: 126px;
+height: 26px;
+text-align: left;
+font-size:20px Roboto;
+letter-spacing: 0px;
+color: #FFFFFF;
+text-transform: capitalize;
+opacity: 1;
+}
+.sub-cat-banner-heading-bckground{
+	top: 1841px;
+left: 218px;
+width: 90px;
+height: 40px;
+background: transparent url(../images/Rectangle 1160.png) 0% 0% no-repeat padding-box;
+border-radius: 6px;
+opacity: 1;
+padding-top: 25px;
+    margin-left: 58px;
+}
+.sub-cat-bottom-banner{
+	
+background: transparent url(../images/sub-cat-ba.png) 0% 0% no-repeat padding-box;
+
 }

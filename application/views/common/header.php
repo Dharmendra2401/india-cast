@@ -90,7 +90,7 @@
      <ul class="nav navbar-nav">
 		 <!-- <li><a href="<?php echo base_url().'home/about';?>">ABOUT US</a></li> -->
         <li><a href="#">Casting Calls  </a></li>
-        <li><a href="#">Categories  </a></li>
+        <li><a href="<?php echo base_url()?>home/category">Categories  </a></li>
         <li><a href="<?php echo base_url().'blog/index';?>">Blogs </a></li>
         <li><a href="#">Tie-Ups </a></li>
         <li><a href="#">Hire Talent </a></li>
